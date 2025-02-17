@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "name": "cuivienen",
+    "version": "0.0.1",
+    "dev": "vite --port 8080",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^9.20.1",
+    "prettier": "^3.5.1",
+    "sass": "^1.85.0",
+    "vite": "^6.1.0"
+  }
+}
