@@ -1,11 +1,14 @@
 {
+  "name": "cuivienen",
+  "version": "0.0.1",
   "scripts": {
-    "name": "cuivienen",
-    "version": "0.0.1",
     "dev": "vite --port 8080",
     "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "Max Bronner",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^9.20.1",
     "prettier": "^3.5.1",
