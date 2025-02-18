@@ -1,0 +1,6 @@
+# Ignore files:
+/src/style/reset.scss
+
+# Ignore artifacts:
+**/dist
+**/node_modules
