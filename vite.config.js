@@ -3,6 +3,15 @@ import { defineConfig } from 'vite';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import Handlebars from 'vite-plugin-handlebars';
 
+const pageData = {
+  '/index.html': {
+    title: 'Main Page',
+  },
+  '/about/index.html': {
+    title: 'Sub Page',
+  },
+};
+
 export default defineConfig({
   root: 'src',
   build: {
@@ -26,6 +35,9 @@ export default defineConfig({
     }),
     Handlebars({
       partialDirectory: resolve(__dirname, 'src/partials'),
+      context(pagePath) {
+        return pageData[pagePath];
+      },
     }),
   ],
 });
