@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import Handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
   root: 'src',
@@ -22,6 +23,9 @@ export default defineConfig({
       removeComments: true,
       removeRedundantAttributes: true,
       removeEmptyAttributes: true,
+    }),
+    Handlebars({
+      partialDirectory: resolve(__dirname, 'src/partials'),
     }),
   ],
 });
