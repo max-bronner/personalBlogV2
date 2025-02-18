@@ -1,0 +1,32 @@
+<section class="blog-list">
+  <div class="blog-list__preview">
+    <div class="blog-list__header">
+      <img
+        class="blog-list__image"
+        src="https://placehold.co/200x200"
+        width="200"
+        height="200"
+        alt="Preview"
+        loading="lazy"
+      />
+      <h2 class="blog-list__title">{{ articles.0.title }}</h2>
+    </div>
+    <div class="blog-list__content">
+      <time class="blog-list__date">{{formatDate articles.0.date "long"}}</time>
+      <p class="blog-list__description">{{ articles.0.description }}</p>
+    </div>
+  </div>
+  <ul class="blog-list__menu">
+    {{#each articles}}
+    <li
+      class="blog-list__item {{#ifEquals @index 1 }}blog-list__item--active{{/ifEquals}}"
+      tabindex="0"
+    >
+      <a href="#"
+        ><p>{{ this.title }}</p>
+        <time>{{formatDate this.date "short"}}</time></a
+      >
+    </li>
+    {{/each}}
+  </ul>
+</section>
