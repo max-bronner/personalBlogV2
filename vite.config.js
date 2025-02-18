@@ -8,7 +8,7 @@ const pageData = {
     title: 'Main Page',
   },
   '/about/index.html': {
-    title: 'Sub Page',
+    title: 'About',
   },
 };
 
