@@ -2,6 +2,13 @@
 @use 'header';
 @use 'blog-list';
 
+body {
+  background: #ebe2da;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, 'Helvetica Neue', sans-serif;
+}
+
 a {
   text-decoration: none;
   color: inherit;
