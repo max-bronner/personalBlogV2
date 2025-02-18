@@ -24,6 +24,9 @@ export default defineConfig({
       },
     },
   },
+  css: {
+    codeSplit: false,
+  },
   plugins: [
     ViteMinifyPlugin({
       collapseWhitespace: true,
