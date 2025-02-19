@@ -2,21 +2,7 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import Handlebars from 'vite-plugin-handlebars';
-
-const HotReloadHbs = () => {
-  return {
-    name: 'hbs-hmr',
-    enforce: 'post',
-    handleHotUpdate({ file, server }) {
-      if (file.endsWith('.hbs')) {
-        server.ws.send({
-          type: 'full-reload',
-          path: '*',
-        });
-      }
-    },
-  };
-};
+import { HotReloadHbs } from './vite.plugin.js';
 
 const pageData = {
   '/index.html': {
