@@ -1,0 +1,30 @@
+.home {
+  display: flex;
+  height: 100%;
+  flex: 1 1 0;
+
+  &__intro,
+  &__blog {
+    flex: 1 1 0;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__blog > * {
+    margin-left: -12%;
+  }
+
+  &__text {
+    h1 {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
