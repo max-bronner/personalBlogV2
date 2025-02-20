@@ -78,9 +78,16 @@
         border-bottom: 1px solid #d3d3d3;
       }
 
-      &.is-active {
+      &.is-active,
+      &:hover {
         background-color: #d8cec6;
         border-radius: 4px;
+      }
+
+      @container blogpreview (width < 650px) {
+        &.is-active:not(:hover) {
+          background-color: inherit;
+        }
       }
     }
 
@@ -88,6 +95,7 @@
       align-items: center;
       display: flex;
       gap: 2rem;
+
       img {
         display: none;
 
