@@ -6,6 +6,7 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
+  "cssDeclarationSorterOrder": "alphabetical",
   "overrides": [
     {
       "files": "**/*.hbs",
@@ -13,5 +14,6 @@
         "parser": "angular"
       }
     }
-  ]
+  ],
+  "plugins": ["prettier-plugin-css-order"]
 }
