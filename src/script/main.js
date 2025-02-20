@@ -1,7 +1,7 @@
 const createBlogPreview = (element) => {
   const state = {
     currentIndex: 0,
-    intervalId: null,
+    // intervalId: null,
     INTERVAL_TIME: 16000,
   };
 
@@ -12,7 +12,7 @@ const createBlogPreview = (element) => {
     item.classList.toggle('is-active', i === state.currentIndex);
   };
 
-  const stopRotation = () => {
+  /* const stopRotation = () => {
     if (state.intervalId) {
       clearInterval(state.intervalId);
       state.intervalId = null;
@@ -26,7 +26,7 @@ const createBlogPreview = (element) => {
       previewItems.forEach(updateActiveElement);
       listItems.forEach(updateActiveElement);
     }, state.INTERVAL_TIME);
-  };
+  }; */
 
   const handleMouseEnter = (event) => {
     const listItem = event.target.closest('.post-list__item');
@@ -38,14 +38,14 @@ const createBlogPreview = (element) => {
   };
 
   const setupEventListeners = () => {
-    element.addEventListener('mouseenter', stopRotation);
+    /* element.addEventListener('mouseenter', stopRotation);
     element.addEventListener('focusin', stopRotation);
     element.addEventListener('mouseleave', startRotation);
     element.addEventListener('focusout', (e) => {
       if (!element.contains(e.relatedTarget)) {
         startRotation();
       }
-    });
+    }); */
 
     const postList = element.querySelector('.post-list');
     postList.addEventListener('mouseenter', handleMouseEnter, true);
@@ -53,7 +53,7 @@ const createBlogPreview = (element) => {
   };
 
   setupEventListeners();
-  startRotation();
+  // startRotation();
 };
 
 const blogPreviewElement = document.querySelector('.blog-preview');
