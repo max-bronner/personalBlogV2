@@ -1,0 +1,22 @@
+<ul class="post-list">
+  {{#each articles}}
+  <li
+    class="post-list__item {{#ifEquals @index 1 }}post-list__item--active{{/ifEquals}}"
+    tabindex="0"
+  >
+    <a href="#">
+      <div class="post-list__image">
+        <img
+          src="https://placehold.co/200x200"
+          width="50"
+          height="50"
+          alt="Preview"
+          loading="lazy"
+        />
+        <p>{{ this.title }}</p>
+      </div>
+      <time>{{formatDate this.date "short"}}</time></a
+    >
+  </li>
+  {{/each}}
+</ul>
