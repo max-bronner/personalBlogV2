@@ -55,10 +55,12 @@
       opacity: 0;
       pointer-events: none;
       position: absolute;
+      transition: opacity 0.1s linear;
 
       &.is-active {
         opacity: 1;
         pointer-events: auto;
+        transition: opacity 0.1s linear 0.1s;
       }
     }
   }
