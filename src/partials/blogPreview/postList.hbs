@@ -4,19 +4,20 @@
     class="post-list__item {{#if @first }}is-active{{/if}}"
     data-index="{{@index}}"
   >
-    <a href="#">
-      <div class="post-list__image">
-        <img
-          src="https://placehold.co/200x200"
-          width="50"
-          height="50"
-          alt="Preview"
-          loading="lazy"
-        />
+    <a href="#" class="post-list__link">
+      <img
+        class="post-list__image"
+        src="https://placehold.co/200x200"
+        width="50"
+        height="50"
+        alt="Preview"
+        loading="lazy"
+      />
+      <div class="post-list__details">
         <p>{{ this.title }}</p>
+        <time>{{formatDate this.date "short"}}</time>
       </div>
-      <time>{{formatDate this.date "short"}}</time></a
-    >
+    </a>
   </li>
   {{/each}}
 </ul>

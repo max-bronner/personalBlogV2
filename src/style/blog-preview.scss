@@ -71,15 +71,20 @@
     overflow-y: auto;
 
     &__item {
-      cursor: pointer;
-      padding: 1rem;
-
       &:not(:last-child) {
         border-bottom: 1px solid #d3d3d3;
       }
+    }
+
+    &__link {
+      align-items: center;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
 
       &.is-active,
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background-color: #d8cec6;
         border-radius: 4px;
       }
@@ -91,17 +96,16 @@
       }
     }
 
-    &__image {
-      align-items: center;
+    &__details {
       display: flex;
-      gap: 2rem;
+      flex-direction: column;
+    }
 
-      img {
-        display: none;
+    &__image {
+      display: none;
 
-        @container blogpreview (width < 650px) {
-          display: block;
-        }
+      @container blogpreview (width < 650px) {
+        display: block;
       }
     }
   }
