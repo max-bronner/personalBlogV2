@@ -1,15 +1,15 @@
 .home {
   display: flex;
-  height: 100%;
   flex: 1 1 0;
+  height: 100%;
 
   &__intro,
   &__blog {
-    flex: 1 1 0;
-    width: 0;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    width: 0;
   }
 
   &__blog > * {
@@ -20,8 +20,8 @@
     margin-bottom: 4rem;
 
     h1 {
-      font-size: 3rem;
       display: block;
+      font-size: 3rem;
       margin-bottom: 2rem;
     }
 
