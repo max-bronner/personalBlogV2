@@ -1,8 +1,8 @@
 <ul class="post-list">
   {{#each articles}}
   <li
-    class="post-list__item {{#ifEquals @index 1 }}post-list__item--active{{/ifEquals}}"
-    tabindex="0"
+    class="post-list__item {{#if @first }}is-active{{/if}}"
+    data-index="{{@index}}"
   >
     <a href="#">
       <div class="post-list__image">

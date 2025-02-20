@@ -20,8 +20,9 @@
   .post-preview {
     border-right: 1px solid #d3d3d3;
     flex: 3;
+    margin: 1rem;
     order: -1;
-    padding: 1rem;
+    position: relative;
 
     @container blogpreview (width < 650px) {
       display: none;
@@ -53,8 +54,8 @@
 
   .post-list {
     flex: 2;
+    margin: 1rem;
     overflow-y: auto;
-    padding: 1rem;
 
     &__item {
       cursor: pointer;
@@ -64,7 +65,7 @@
         border-bottom: 1px solid #d3d3d3;
       }
 
-      &--active {
+      &.is-active {
         background-color: #d8cec6;
         border-radius: 4px;
       }
