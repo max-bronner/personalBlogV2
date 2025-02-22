@@ -8,12 +8,15 @@
     align-items: center;
     display: flex;
     flex: 1 1 0;
-    justify-content: center;
+    justify-content: flex-start;
     width: 0;
   }
 
-  &__blog > * {
-    margin-left: -12%;
+  &__blog {
+    justify-content: flex-end;
+    > * {
+      margin-left: -12%;
+    }
   }
 
   &__text {
