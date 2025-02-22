@@ -36,5 +36,10 @@ export const data = {
       date: '2025-01-01',
     },
   ],
+  content: [
+    { component: 'hero' },
+    { component: 'text' },
+    { component: 'image' },
+  ],
   title: 'Main Page',
 };
