@@ -55,33 +55,3 @@ a:focus {
 a:active {
   color: #005fa3; /* Darker color when clicked */
 }
-
-.layout {
-  margin: auto;
-  max-width: 1200px;
-  padding: 2rem;
-}
-
-.preview-list {
-  display: flex;
-  gap: 2rem;
-
-  &__left {
-    flex: 2;
-  }
-
-  &__right {
-    flex: 1;
-  }
-}
-
-.preview-list__menu {
-  cursor: pointer;
-  list-style: none;
-}
-
-.preview-item__image {
-  display: block;
-  height: auto;
-  width: 100%;
-}
