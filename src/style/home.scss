@@ -2,36 +2,29 @@
   display: flex;
   flex: 1 1 0;
   height: 100%;
+  margin: -5rem -4rem;
 
-  &__intro,
-  &__blog {
+  &__left,
+  &__right {
     align-items: center;
     display: flex;
-    flex: 1 1 0;
-    justify-content: flex-start;
-    width: 0;
+    padding: 5rem 4rem;
   }
 
-  &__blog {
-    justify-content: flex-end;
-    > * {
-      margin-left: -12%;
+  &__left {
+    background-color: var(--primary-color);
+    flex: 1 1 40%;
+
+    & > * {
+      margin-right: 8rem;
     }
   }
 
-  &__text {
-    color: #e5e5e5;
-    margin-bottom: 4rem;
-    max-width: 80%;
+  &__right {
+    flex: 1 1 60%;
 
-    h1 > span {
-      display: block;
-      font-size: 3.75rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-      padding-top: 1rem;
+    & > * {
+      margin-left: -12rem;
     }
   }
 }
