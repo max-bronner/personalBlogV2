@@ -1,0 +1,112 @@
+.recent-posts {
+  background-color: #e5e5e5;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  container: blogpreview / inline-size;
+  display: flex;
+  height: 32rem;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  width: 112%;
+
+  time {
+    color: #666;
+    display: block;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+  }
+
+  .post-preview {
+    border-right: 1px solid #d3d3d3;
+    flex: 3;
+    margin: 1rem;
+    order: -1;
+    position: relative;
+
+    @container blogpreview (width < 650px) {
+      display: none;
+    }
+
+    &__header {
+      display: flex;
+    }
+
+    &__image {
+      border-radius: 4px;
+    }
+
+    &__title {
+      align-self: center;
+      font-size: 2rem;
+      padding: 0 1rem;
+    }
+
+    &__content {
+      padding: 1rem;
+
+      & time {
+        font-size: 1rem;
+        padding: 0 0 0.5rem;
+      }
+    }
+
+    &__item {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      transition: opacity 0.1s linear;
+
+      &.is-active {
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.1s linear 0.1s;
+      }
+    }
+  }
+
+  .post-list {
+    flex: 2;
+    margin: 1rem;
+    overflow-y: auto;
+
+    &__item {
+      &:not(:last-child) {
+        border-bottom: 1px solid #d3d3d3;
+      }
+    }
+
+    &__link {
+      align-items: center;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+
+      &.is-active,
+      &:hover,
+      &:focus-visible {
+        background-color: #d8cec6;
+        border-radius: 4px;
+      }
+
+      @container blogpreview (width < 650px) {
+        &.is-active:not(:hover) {
+          background-color: inherit;
+        }
+      }
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__image {
+      display: none;
+
+      @container blogpreview (width < 650px) {
+        display: block;
+      }
+    }
+  }
+}
