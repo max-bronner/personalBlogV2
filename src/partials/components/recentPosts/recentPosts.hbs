@@ -1,22 +1,23 @@
 <section class="recent-posts">
   <ul class="recent-posts__list">
     {{#each articles}}
-    <li
-      class="post-list__item {{#if @first }}is-active{{/if}}"
-      data-index="{{@index}}"
-    >
-      <a href="#" class="post-list__link">
+    <li class="recent-posts__item">
+      <a href="#" class="recent-posts__link">
         <img
-          class="post-list__image"
-          src="https://placehold.co/200x200"
-          width="50"
-          height="50"
+          class="recent-posts__image"
+          src="https://placehold.co/150x100"
+          width="150"
+          height="100"
           alt="Preview"
           loading="lazy"
         />
-        <div class="post-list__details">
-          <p>{{ this.title }}</p>
-          <time>{{formatDate this.date "short"}}</time>
+        <div class="recent-posts__details">
+          <h2>{{ this.title }}</h2>
+          <p class="recent-posts__description">{{ this.description }}</p>
+          <time
+            class="recent-posts__date"
+            >{{formatDate this.date "short"}}</time
+          >
         </div>
       </a>
     </li>
