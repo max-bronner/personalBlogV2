@@ -1,0 +1,37 @@
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  fill: var(--secondary-color);
+}
+
+a:active {
+  color: var(--primary-color);
+}
+
+/* 
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a39e9b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+ */
