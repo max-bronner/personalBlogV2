@@ -1,41 +1,17 @@
 .header {
   align-items: center;
-  color: black;
   display: flex;
+  height: 5rem;
   justify-content: space-between;
-  padding: 1rem 0;
   position: sticky;
 
   &__logo {
-    color: #e5e5e5;
-    font-size: 1.5rem;
-  }
-
-  &__nav {
-    position: relative;
+    color: var(--bg-color);
+    font-size: 2rem;
   }
 
   &__menu {
     display: flex;
-    gap: 1rem;
-    list-style: none;
-
-    @media (max-width: 768px) {
-      background: #444;
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      right: 0;
-      top: 100%;
-      width: 200px;
-    }
-  }
-
-  &__toggle {
-    display: none;
-
-    @media (max-width: 768px) {
-      display: block;
-    }
+    gap: 1.5rem;
   }
 }
