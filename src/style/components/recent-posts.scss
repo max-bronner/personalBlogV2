@@ -18,11 +18,11 @@
     &:focus-visible {
       background-color: color-mix(
         in srgb,
-        var(--primary-color) 25%,
+        var(--secondary-color) 15%,
         transparent
       );
       border-radius: 8px;
-      color: black;
+      color: var(--text-primary);
       text-decoration: none;
 
       .recent-posts__title {
