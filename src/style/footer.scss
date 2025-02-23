@@ -1,12 +1,12 @@
 .footer {
   align-items: center;
   display: flex;
+  height: 5rem;
   justify-content: space-between;
-  min-height: 56px;
 }
 
 .footer-copy {
-  width: 50%;
+  color: var(--bg-color);
 }
 
 .footer-contact {

@@ -1,0 +1,32 @@
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  fill: var(--secondary-color);
+}
+
+a:active {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 3.75rem;
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+a,
+p {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}

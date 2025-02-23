@@ -1,14 +1,8 @@
 <main class="home">
-  <section class="home__intro">
-    <div class="home__text">
-      <h1>Hi there! I'm Max.</h1>
-      <p>
-        A developer specialised on performance and passionate about
-        accessibility.
-      </p>
-    </div>
+  <section class="home__left">
+    {{>components/introduction/introduction}}
   </section>
-  <section class="home__blog">
-    {{>components/blogPreview/blogPreview}}
+  <section class="home__right">
+    {{>components/recentPosts/recentPosts}}
   </section>
 </main>
