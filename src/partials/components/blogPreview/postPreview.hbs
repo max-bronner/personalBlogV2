@@ -1,0 +1,21 @@
+<div class="post-preview">
+  {{#each articles}}
+  <div class="post-preview__item {{#if @first}}is-active{{/if}}">
+    <div class="post-preview__header">
+      <img
+        class="post-preview__image"
+        src="https://placehold.co/200x200"
+        width="200"
+        height="200"
+        alt="Preview"
+        loading="lazy"
+      />
+      <h2 class="post-preview__title">{{ this.title }}</h2>
+    </div>
+    <div class="post-preview__content">
+      <time class="post-preview__date">{{formatDate this.date "long"}}</time>
+      <p class="post-preview__description">{{ this.description }}</p>
+    </div>
+  </div>
+  {{/each}}
+</div>

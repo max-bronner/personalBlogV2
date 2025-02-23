@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex: 1 1 0;
+  height: 100%;
+
+  &__intro,
+  &__blog {
+    align-items: center;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: flex-start;
+    width: 0;
+  }
+
+  &__blog {
+    justify-content: flex-end;
+    > * {
+      margin-left: -12%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+    max-width: 80%;
+
+    h1 {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

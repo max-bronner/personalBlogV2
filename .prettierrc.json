@@ -5,5 +5,15 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false
+  "useTabs": false,
+  "cssDeclarationSorterOrder": "alphabetical",
+  "overrides": [
+    {
+      "files": "**/*.hbs",
+      "options": {
+        "parser": "angular"
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-css-order"]
 }

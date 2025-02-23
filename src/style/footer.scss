@@ -1,0 +1,34 @@
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 56px;
+}
+
+.footer-copy {
+  width: 50%;
+}
+
+.footer-contact {
+  display: flex;
+  gap: 1.5rem;
+
+  &__link {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      fill: black;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: inherit;
+      }
+    }
+  }
+}
