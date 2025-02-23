@@ -1,0 +1,12 @@
+.introduction {
+  color: var(--bg-color);
+  max-width: 80%;
+
+  &__heading {
+    display: block;
+  }
+
+  &__text {
+    padding-top: 1rem;
+  }
+}

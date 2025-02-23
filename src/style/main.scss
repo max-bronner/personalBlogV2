@@ -1,11 +1,11 @@
 @use 'abstracts';
-@use 'base';
 @use 'reset';
+@use 'base';
 @use 'header';
 @use 'footer';
+@use 'components/index';
 @use 'home';
 @use 'blog-preview';
-@use 'recent-posts';
 
 body {
   background: var(--bg-color);
@@ -14,8 +14,6 @@ body {
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, 'Helvetica Neue', sans-serif;
-}
-
-body.homepage {
-  background: linear-gradient(90deg, #5c705a 42%, #e5e5e5 42%);
+  min-height: 100vh;
+  padding-inline: 4rem;
 }
