@@ -9,4 +9,37 @@
   &__text {
     padding-top: 1rem;
   }
+
+  &__list {
+    display: none;
+
+    @media (max-width: 919px) {
+      display: block;
+      padding-top: 1rem;
+    }
+  }
+
+  &__contact {
+    padding-top: 1rem;
+  }
+
+  &__link {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+
+    svg {
+      height: 1rem;
+      width: 1rem;
+      fill: var(--bg-color);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--text-primary);
+      svg {
+        fill: var(--text-primary);
+      }
+    }
+  }
 }
