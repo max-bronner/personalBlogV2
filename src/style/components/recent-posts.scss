@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
-  width: 100%;
+  width: max(100%, 614px);
 
   &__link {
     align-items: center;
@@ -33,6 +33,10 @@
 
   &__image {
     border-radius: 8px;
+
+    @media (max-width: 919px) {
+      display: none;
+    }
   }
 
   &__details {
@@ -55,7 +59,7 @@
   }
 
   &__date {
-    color: #666;
+    color: var(--quote-color);
     display: block;
     font-size: 0.8rem;
     line-height: 0.8rem;
