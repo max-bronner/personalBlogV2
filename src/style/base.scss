@@ -14,6 +14,10 @@ body {
   }
 }
 
+main {
+  margin-bottom: auto;
+}
+
 a {
   color: inherit;
   outline: none;
@@ -42,7 +46,8 @@ h2 {
 }
 
 a,
-p {
+p,
+time {
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
