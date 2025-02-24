@@ -8,6 +8,10 @@
   padding: 1.5rem;
   width: max(100%, 614px);
 
+  @media (max-width: 919px) {
+    padding: 1rem;
+  }
+
   &__link {
     align-items: center;
     display: flex;

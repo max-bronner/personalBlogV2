@@ -6,12 +6,15 @@
   position: sticky;
 
   &__logo {
-    color: var(--bg-color);
     font-size: 2rem;
 
     @media (max-width: 919px) {
       font-size: 1.35rem;
       font-weight: 500;
+    }
+
+    .homepage & {
+      color: var(--bg-color);
     }
   }
 
@@ -20,7 +23,9 @@
     gap: 1.5rem;
 
     @media (max-width: 919px) {
-      color: var(--bg-color);
+      .homepage & {
+        color: var(--bg-color);
+      }
     }
   }
 }
