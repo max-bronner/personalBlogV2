@@ -4,9 +4,11 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import Handlebars from 'vite-plugin-handlebars';
 import { HotReloadHbs } from './vite.plugin.js';
 import dataHome from './src/data.js';
+import data20200606 from './src/blog/plants_2020-06-06.js';
 
 const pageData = {
   '/index.html': dataHome,
+  '/blog/plants_2020-06-06.html': data20200606,
   '/about/index.html': {
     title: 'About',
   },
