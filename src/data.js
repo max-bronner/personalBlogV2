@@ -1,4 +1,4 @@
-export const data = {
+export default {
   articles: [
     {
       title: 'The Secret to Thriving Indoor Plants',

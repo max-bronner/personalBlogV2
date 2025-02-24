@@ -1,8 +1,17 @@
-<img
-  class="post__image"
-  src="https://placehold.co/200x200"
-  width="500"
-  height="500"
-  alt="Preview"
-  loading="lazy"
-/>
+<figure>
+  <picture>
+    <source
+      srcset="/images/{{file}}_1280.webp 2x, /images/{{file}}_640.webp 1x"
+      type="image/webp"
+    />
+
+    <img
+      class="post__image"
+      src="/images/{{ file }}_640.jpeg"
+      srcset="/images/{{file}}_1280.jpeg 2x, /images/{{file}}_640.jpeg 1x"
+      alt="{{ description }}"
+      width="640"
+    />
+  </picture>
+  <figcaption class="post__image-caption">{{ description }}</figcaption>
+</figure>
