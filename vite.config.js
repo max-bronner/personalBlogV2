@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import Handlebars from 'vite-plugin-handlebars';
 import { HotReloadHbs } from './vite.plugin.js';
-import { data as dataHome } from './src/data.js';
+import dataHome from './src/data.js';
 
 const pageData = {
   '/index.html': dataHome,
