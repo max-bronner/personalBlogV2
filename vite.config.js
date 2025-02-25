@@ -4,7 +4,7 @@ import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import Handlebars from 'vite-plugin-handlebars';
 import { HotReloadHbs } from './vite.plugin.js';
 import dataHome from './src/data.js';
-import data20200606 from './src/blog/plants_2020-06-06.js';
+import data20200606 from './src/blog/posts/plants_2020-06-06.json';
 
 const pageData = {
   '/index.html': dataHome,
@@ -22,7 +22,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        about: resolve(__dirname, 'src/about/index.html'),
       },
     },
   },
