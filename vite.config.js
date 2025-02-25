@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import Handlebars from 'vite-plugin-handlebars';
-import { HotReloadHbs } from './vite.plugin.js';
+import { HotReloadHbs, helpers } from './vite.plugin.js';
 import dataHome from './src/data.js';
 import data20200606 from './src/blog/posts/plants_2020-06-06.json';
 
@@ -43,33 +43,7 @@ export default defineConfig({
       context(pagePath) {
         return pageData[pagePath];
       },
-      helpers: {
-        ifEquals: (arg1, arg2, options) => {
-          if (arg1 === arg2) {
-            return options.fn(this);
-          }
-          return options.inverse(this);
-        },
-        formatDate: (date, format) => {
-          const dateObject = new Date(date);
-
-          if (format === 'short') {
-            return dateObject.toLocaleString('default', {
-              year: 'numeric',
-              month: 'numeric',
-              day: 'numeric',
-            });
-          } else if (format === 'long') {
-            return dateObject.toLocaleString('default', {
-              month: 'short',
-              day: 'numeric',
-              year: 'numeric',
-            });
-          } else {
-            return dateObject.toLocaleDateString();
-          }
-        },
-      },
+      helpers,
     }),
     HotReloadHbs(),
   ],
