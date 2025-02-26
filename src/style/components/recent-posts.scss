@@ -2,7 +2,7 @@
   background-color: var(--bg-color);
   border: 1px solid var(--primary-grey);
   border-radius: 8px;
-  container: blogpreview / inline-size;
+  container: test / inline-size;
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
@@ -17,14 +17,11 @@
     display: flex;
     gap: 1.5rem;
     padding: 1rem;
+    transition: transform 0.2s;
 
     &:hover,
     &:focus-visible {
-      background-color: color-mix(
-        in srgb,
-        var(--secondary-color) 15%,
-        transparent
-      );
+      background-color: var(--hover-bg-color);
       border-radius: 8px;
       color: var(--text-primary);
       text-decoration: none;
@@ -36,7 +33,10 @@
   }
 
   &__image {
+    aspect-ratio: 3 / 2;
     border-radius: 8px;
+    object-fit: cover;
+    width: 150px;
 
     @media (max-width: 919px) {
       display: none;
