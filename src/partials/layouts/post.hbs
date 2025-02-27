@@ -1,6 +1,6 @@
 <main class="post">
   <section>
-    <h1 class="post__title">{{{title}}}</h1>
+    <h1 class="post__title">{{{titleHtml}}}</h1>
     <time class="post__date">{{date}}</time>
     {{#each content}}
       {{> (lookup this 'component') }}
