@@ -1,0 +1,16 @@
+.blog__filters {
+  margin-bottom: 2rem;
+}
+
+.blog__filters-options {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media (max-width: 919px) {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+}
