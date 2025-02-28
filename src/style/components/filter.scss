@@ -13,4 +13,19 @@
     flex-direction: column;
   }
 }
+
+.blog__category,
+.blog__sort {
+  min-width: 160px;
+}
+
+.blog__category-select,
+.blog__sort-select {
+  background-color: var(--white);
+  border: 1px solid var(--primary-grey);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  width: 100%;
 }
