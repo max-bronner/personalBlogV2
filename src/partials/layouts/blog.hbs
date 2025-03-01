@@ -1,3 +1,31 @@
 <main class="blog">
-  <section class="preview-list"></section>
+  {{> components/filter/filterOverview}}
+  <div class="blog__content">
+    <h1 class="blog__title">Blog</h1>
+
+    <div class="blog__grid">
+      <article
+        class="card"
+        data-category="technology"
+        data-date="2025-02-15"
+        data-views="1250"
+      >
+        <div class="card__image">
+          <img
+            src="/images/IMG_20200606_640.webp"
+            alt="Tech post placeholder"
+            class="card__img"
+          />
+        </div>
+        <div class="card__content">
+          <span class="card__category">Plants</span>
+          <h2 class="card__title">Back to Green</h2>
+          <p class="card__excerpt">How my home finally became greener</p>
+          <div class="card__footer">
+            <a href="/blog/plants_2020-06-06" class="card__link">Read More</a>
+            <span class="card__date">Feb 15, 2025</span>
+          </div>
+        </div>
+      </article>
+  </div>
 </main>
