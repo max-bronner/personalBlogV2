@@ -34,10 +34,8 @@
   }
 
   &__image {
-    aspect-ratio: 3 / 2;
     border-radius: 8px;
     object-fit: cover;
-    width: 150px;
 
     @media (max-width: 919px) {
       display: none;
