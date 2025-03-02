@@ -1,7 +1,12 @@
 {
   "title": "Back to Green",
   "titleHtml": "Back to <span class=\"post__title--green\">Green</span>",
-  "image": "IMG_20200606",
+  "image": {
+    "file": "IMG_20200606",
+    "hasDescription": false,
+    "width": 150,
+    "height": 100
+  },
   "description": "Like many others currently, I’m starting to add plants to my home",
   "date": "June 10, 2020",
   "content": [
@@ -19,7 +24,12 @@
     },
     {
       "component": "components/image/image",
-      "file": "IMG_20200606",
+      "config": {
+        "file": "IMG_20200606",
+        "hasDescription": true,
+        "width": 640,
+        "height": 715
+      },
       "description": "Fernwood Mikado Snake Plant in the foreground with a Ponytail Palm in the background."
     }
   ]

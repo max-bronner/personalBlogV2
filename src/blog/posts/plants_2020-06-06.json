@@ -1,7 +1,12 @@
 {
   "title": "Back to Green",
   "titleHtml": "Back to <span class=\"post__title--green\">Green</span>",
-  "image": "IMG_20200606",
+  "image": {
+    "file": "IMG_20200606",
+    "hasDescription": false,
+    "width": 150,
+    "height": 100
+  },
   "description": "Like many others currently, I’m starting to add plants to my home",
   "date": "June 6, 2020",
   "content": [
