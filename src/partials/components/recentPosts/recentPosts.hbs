@@ -2,7 +2,7 @@
   <ul class="recent-posts__list">
     {{#each articles}}
     <li class="recent-posts__item">
-      <a href="#" class="recent-posts__link">
+      <a href="{{ this.path }}" class="recent-posts__link">
         {{> components/image/image config = this.image imgClass="recent-posts__image"}}
         <div class="recent-posts__details">
           <h2 class="recent-posts__title">{{ this.title }}</h2>
