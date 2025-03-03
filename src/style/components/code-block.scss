@@ -1,0 +1,38 @@
+.code-block {
+  background-color: var(--bg-color-code);
+  border: 1px solid var(--primary-grey);
+  border-radius: 6px;
+  font-family:
+    'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.code-block-header {
+  align-items: center;
+  background-color: var(--primary-grey);
+  border-bottom: 1px solid var(--secondary-grey);
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.code-block-title {
+  font-weight: bold;
+}
+
+.code-content {
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin: 0;
+  overflow-x: auto;
+  padding: 1rem 1rem 1rem 1.5rem;
+  tab-size: 2;
+  white-space: pre;
+}
+
+.code-content code {
+  border: none;
+  display: block;
+}
