@@ -37,6 +37,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
+        blog: resolve(__dirname, 'src/blog/index.html'),
+        post1: resolve(__dirname, 'src/blog/plants_2020-06-06.html'),
+        post2: resolve(__dirname, 'src/blog/plants_2020-06-07.html'),
+        post3: resolve(__dirname, 'src/blog/plants_2020-06-08.html'),
+        post4: resolve(__dirname, 'src/blog/plants_2020-06-09.html'),
+        post5: resolve(__dirname, 'src/blog/plants_2020-06-10.html'),
+        about: resolve(__dirname, 'src/about/index.html'),
       },
     },
   },
