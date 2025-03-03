@@ -5,12 +5,25 @@ import Handlebars from 'vite-plugin-handlebars';
 import { HotReloadHbs, helpers } from './vite.plugin.js';
 import dataHome from './src/data.js';
 import data20200606 from './src/blog/posts/plants_2020-06-06.json';
+import data20200607 from './src/blog/posts/plants_2020-06-07.json';
+import data20200608 from './src/blog/posts/plants_2020-06-08.json';
+import data20200609 from './src/blog/posts/plants_2020-06-09.json';
+import data20200610 from './src/blog/posts/plants_2020-06-10.json';
 import dataBlog from './src/blog/posts/data.js';
+import fs from 'fs';
+
+const parseContent = () => {
+  const contentFiles = fs.globSync('./content/**/*.json');
+};
 
 const pageData = {
   '/index.html': dataHome,
   '/blog/index.html': { articles: dataBlog },
   '/blog/plants_2020-06-06.html': data20200606,
+  '/blog/plants_2020-06-07.html': data20200607,
+  '/blog/plants_2020-06-08.html': data20200608,
+  '/blog/plants_2020-06-09.html': data20200609,
+  '/blog/plants_2020-06-10.html': data20200610,
   '/about/index.html': {
     title: 'About',
   },
