@@ -1,0 +1,77 @@
+{
+  "title": "First Hike of the Season",
+  "path": "/blog/plants_2020-06-15",
+  "titleHtml": "First Hike of the Season",
+  "image": {
+    "src": "IMG_20200612_2_preview_450",
+    "srcBig": "IMG_20200612_2_preview_450",
+    "alt": "Highlands of the alps",
+    "height": 300,
+    "width": 450
+  },
+  "description": "A relaxed hike in the Zillertal Alps, taking in the fresh air and great views. A good start into the season.",
+  "date": "June 15, 2020",
+  "category": "Travel",
+  "content": [
+    {
+      "component": "components/text/text",
+      "content": "Last weekend, I finally kicked off the hiking season in the Zillertal Alps. The plan was simple: a relaxed one day hike, enjoying the mountains, but taking it easy, and see how far we get. Since I wasn’t hiking alone this time, we decided on a flexible route instead of a fixed tour."
+    },
+    {
+      "component": "components/text/text",
+      "content": "We got up early in the morning and left the house at 8 AM. The first section of the hike led us through the forest, winding up the mountain road with some shortcuts for about two hours. The fresh mountain air was incredible, and even though we were still relatively low, the views were already stunning. It felt like a great start into the day."
+    },
+    {
+      "component": "components/text/text",
+      "content": "Eventually, we reached the treeline, where the thick forest gave way to the open highlands of the Alps. We took a short break to decide where we wanted to head next. I spotted a smaller not too intimidating peak not too far away I never hiked before — and thought it might be fun to give it a try. The only problem? I had no idea if there was actually a trail leading up to it let alone where it could be."
+    },
+    {
+      "component": "components/image/image",
+      "src": "IMG_20200612_2_640",
+      "srcBig": "IMG_20200612_2_1280",
+      "width": 640,
+      "height": 480,
+      "alt": "The highlands of the alps with some snowy peaks.",
+      "caption": "The highlands of the alps with some snowy peaks."
+    },
+    {
+      "component": "components/text/text",
+      "content": "We headed in the direction of the peak and after a while, found a small trail following a stream of water. It curved int he right direction and seemed promising, so we followed it for about an hour, only to realize it wasn’t leading up the mountain but rather around the base of a slope. This was a good reminder of why having a proper hiking map is essential — Google Maps and most online hiking apps most often lack proper trails."
+    },
+    {
+      "component": "components/text/text",
+      "content": "Despite this, I noticed a few people far higher up on the slope, which made me think there had to be a path somewhere. Since I still had plenty of energy and motivation and the incline didn’t look too steep, I decided to give it a go while my friend found a nice sunny spot on a cliff to relax and enjoy the view. What seemed like a simple climb quickly turned into an exhausting adventure. Without a clear path, I had to make my way up over rocks and grass, carefully navigating the terrain."
+    },
+    {
+      "component": "components/image/image",
+      "src": "IMG_20200612_3_640",
+      "srcBig": "IMG_20200612_3_1280",
+      "width": 640,
+      "height": 480,
+      "alt": "A mountain stream with a beatiful view over the alps.",
+      "caption": "A mountain stream with a beatiful view over the alps."
+    },
+    {
+      "component": "components/text/text",
+      "content": "As I climbed, I noticed the people above me were rather careless or inexperienced, kicking off rocks down the slope — some of which rolled worryingly close to me. At that point, I decided to move to a steeper section farther away from them for safety. After about 30 minutes of exhausting climbing, I was finally close to where I thought the trail should be only to realized, the other hikers didn’t follow a trail neither. They were just making their way up randomly, which explained all the loose rocks tumbling down."
+    },
+    {
+      "component": "components/text/text",
+      "content": "Since this was my first hike of the season and there was still a long way to go, I decided it wasn’t worth the risk to push further. I turned around and made my way back down to my friend. We took a long lunch break, enjoying the sunshine and the stunning views. Later in the afternoon, we made our way back down to the hut, where we enjoyed some well-earned chilled beers."
+    },
+    {
+      "component": "components/text/text",
+      "content": "Even though we didn’t reach a peak, it still felt like a successful start to the hiking season. Often, the best hikes aren’t about reaching the top but the hike itself."
+    },
+
+    {
+      "component": "components/image/image",
+      "src": "IMG_20200611_640",
+      "srcBig": "IMG_20200611_1280",
+      "width": 640,
+      "height": 854,
+      "alt": "Some cold beers after a long hike.",
+      "caption": "Some cold beers after a long hike."
+    }
+  ]
+}

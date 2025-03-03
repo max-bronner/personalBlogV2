@@ -1,0 +1,10 @@
+<div class="code-block">
+  <div class="code-block-header">
+    {{#if title}}
+    <div class="code-block-title">{{ title }}</div>
+    {{/if}}
+  </div>
+  <pre
+    class="code-content"
+  ><code>{{#each lines}}{{this}}{{#if @last}}{{else}}<br>{{/if}}{{/each}}</code></pre>
+</div>

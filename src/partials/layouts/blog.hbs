@@ -4,7 +4,10 @@
     <h1 class="blog__title">Blog</h1>
 
     <div class="blog__count">
-      <span id="showing-count" class="blog__count-showing">5</span> posts found
+      <span id="showing-count" class="blog__count-showing">{{
+        articles.length
+      }}</span>
+      posts found
     </div>
 
     <div class="blog__grid">
@@ -15,7 +18,7 @@
         data-date="{{ this.date }}"
       >
         <div class="card__image">
-          {{> components/image/image config = this.image imgClass="card__img"}}
+          {{> components/image/image this.image imgClass="card__img" eagerLoaded = @first}}
         </div>
         <div class="card__content">
           <span class="card__category">{{ this.category }}</span>
