@@ -15,7 +15,7 @@
         data-date="{{ this.date }}"
       >
         <div class="card__image">
-          {{> components/image/image config = this.image imgClass="card__img"}}
+          {{> components/image/image this.image imgClass="card__img" eagerLoaded = @first}}
         </div>
         <div class="card__content">
           <span class="card__category">{{ this.category }}</span>
