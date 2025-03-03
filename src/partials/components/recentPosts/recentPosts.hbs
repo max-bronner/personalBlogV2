@@ -2,15 +2,8 @@
   <ul class="recent-posts__list">
     {{#each articles}}
     <li class="recent-posts__item">
-      <a href="#" class="recent-posts__link">
-        <img
-          class="recent-posts__image"
-          src="https://placehold.co/150x100"
-          width="150"
-          height="100"
-          alt="Preview"
-          loading="lazy"
-        />
+      <a href="{{ this.path }}" class="recent-posts__link">
+        {{> components/image/image config = this.image imgClass="recent-posts__image"}}
         <div class="recent-posts__details">
           <h2 class="recent-posts__title">{{ this.title }}</h2>
           <p class="recent-posts__description">{{ this.description }}</p>

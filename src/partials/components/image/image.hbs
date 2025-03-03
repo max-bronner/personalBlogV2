@@ -1,17 +1,24 @@
 <figure>
   <picture>
     <source
-      srcset="/images/{{file}}_1280.webp 2x, /images/{{file}}_640.webp 1x"
+      srcset="/images/{{config.file}}_1280.webp 2x, /images/{{config.file}}_640.webp 1x"
       type="image/webp"
     />
 
     <img
-      class="post__image"
-      src="/images/{{ file }}_640.jpeg"
-      srcset="/images/{{file}}_1280.jpeg 2x, /images/{{file}}_640.jpeg 1x"
+      {{#if imgClass}} class="{{ imgClass }}"{{/if}}
+      src="/images/{{ config.file }}_640.jpeg"
+      srcset="/images/{{config.file}}_1280.jpeg 2x, /images/{{config.file}}_640.jpeg 1x"
       alt="{{ description }}"
-      width="640"
+      width="{{ config.width }}"
+      height="{{ config.height }}"
     />
   </picture>
-  <figcaption class="post__image-caption">{{ description }}</figcaption>
+  {{#if config.hasDescription}}
+    <figcaption 
+      {{#if captionClass}} class="{{ captionClass }}"{{/if}}
+    >
+        {{ description }}
+    </figcaption>
+  {{/if}}
 </figure>

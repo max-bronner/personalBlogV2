@@ -1,0 +1,58 @@
+.blog {
+  margin: 2rem auto auto;
+  padding: 0 1rem;
+  width: min(100%, 80rem);
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  &__count {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    margin-bottom: 2rem;
+  }
+
+  &__pagination {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  &__pagination-btn {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 2px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    transition: background-color 0.2s;
+
+    &:hover:not([disabled]) {
+      background-color: var(--label-green);
+    }
+
+    &[disabled] {
+      background-color: var(--primary-grey);
+      cursor: not-allowed;
+    }
+  }
+
+  &__pagination-indicator {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+}

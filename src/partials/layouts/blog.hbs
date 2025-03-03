@@ -1,3 +1,43 @@
 <main class="blog">
-  <section class="preview-list"></section>
+  {{> components/filter/filterOverview}}
+  <div class="blog__content">
+    <h1 class="blog__title">Blog</h1>
+
+    <div class="blog__count">
+      <span id="showing-count" class="blog__count-showing">5</span> posts found
+    </div>
+
+    <div class="blog__grid">
+      {{#each articles}}
+      <article
+        class="card"
+        data-category="{{ this.category }}"
+        data-date="{{ this.date }}"
+      >
+        <div class="card__image">
+          {{> components/image/image config = this.image imgClass="card__img"}}
+        </div>
+        <div class="card__content">
+          <span class="card__category">{{ this.category }}</span>
+          <h2 class="card__title">{{ this.title }}</h2>
+          <p class="card__excerpt">{{ this.description }}</p>
+          <div class="card__footer">
+            <a href="{{ this.path }}" class="card__link">Read More</a>
+            <span class="card__date">{{ this.date }}</span>
+          </div>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+
+    <div class="blog__pagination">
+      <button class="blog__pagination-btn blog__pagination-prev" disabled>
+        &laquo; Previous
+      </button>
+      <span class="blog__pagination-indicator">Page 1 of 1</span>
+      <button class="blog__pagination-btn blog__pagination-next" disabled>
+        Next &raquo;
+      </button>
+    </div>
+  </div>
 </main>
