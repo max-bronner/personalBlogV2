@@ -4,6 +4,7 @@
   const sortSelect = document.getElementById('sort-select');
   const searchInput = document.getElementById('search-input');
   const searchButton = document.getElementById('search-button');
+  const showingCount = document.getElementById('showing-count');
 
   const filterPosts = () => {
     const category = categorySelect.value;
@@ -34,6 +35,8 @@
         post.style.display = 'none';
       }
     });
+
+    showingCount.textContent = visibleCount;
 
     sortPosts(sortBy);
   };
