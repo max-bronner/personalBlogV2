@@ -1,4 +1,4 @@
-import data from './blog/posts/index.js';
+import data from './blog/posts/data.js';
 
 export default {
   articles: [...data.splice(0, 4)],

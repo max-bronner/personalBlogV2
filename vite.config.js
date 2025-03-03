@@ -5,9 +5,11 @@ import Handlebars from 'vite-plugin-handlebars';
 import { HotReloadHbs, helpers } from './vite.plugin.js';
 import dataHome from './src/data.js';
 import data20200606 from './src/blog/posts/plants_2020-06-06.json';
+import dataBlog from './src/blog/posts/data.js';
 
 const pageData = {
   '/index.html': dataHome,
+  '/blog/index.html': { articles: [dataBlog[0]] },
   '/blog/plants_2020-06-06.html': data20200606,
   '/about/index.html': {
     title: 'About',
