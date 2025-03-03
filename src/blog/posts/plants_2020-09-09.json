@@ -1,0 +1,152 @@
+{
+  "title": "Exploring CSS Logical Properties",
+  "path": "/blog/plants_2020-09-09",
+  "titleHtml": "Exploring CSS Logical Properties",
+  "image": {
+    "src": "IMG_20200909_preview_450",
+    "srcBig": "IMG_20200909_preview_450",
+    "hasDescription": false,
+    "height": 300,
+    "width": 450
+  },
+  "description": "CSS Logical Properties offer flexible styling that adapts to different writing directions. This post compares them with traditional CSS properties and shows how they create more versatile layouts.",
+  "date": "September 9, 2020",
+  "category": "Dev",
+  "content": [
+    {
+      "component": "components/text/text",
+      "content": "A couple days ago, while tweaking some CSS in the Chrome DevTools, I noticed <code>padding-block-end</code> in the autocomplete suggestions. My first thought was that this might be a new feature, but after investigating, I discovered these logical properties have been around for quite some time. And recently, they’ve been getting more attention."
+    },
+    {
+      "component": "components/text/text",
+      "content": "As developers, we’re all familiar with traditional properties like <code>margin-top</code> and <code>padding-left</code>."
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "Traditional CSS",
+      "lines": ["margin-left: 8px;", "padding-right: 16px;"]
+    },
+    {
+      "component": "components/text/text",
+      "content": "These make intuitive sense when we think about positioning elements using physical directions: left, right, top, and bottom."
+    },
+    {
+      "component": "components/text/text",
+      "content": "But this approach is limiting. Many languages don’t follow left-to-right patterns. Arabic reads right-to-left (RTL), while Japanese can be even written vertically. Suddenly, left and right aren’t so universal anymore, aren’t they?"
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Enter CSS Logical Properties"
+    },
+    {
+      "component": "components/text/text",
+      "content": "Logical properties offer a more flexible way to define layouts which adapt automatically. Instead of <code>margin-left</code> or <code>padding-right</code>, we use:"
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "Logical Properties",
+      "lines": ["margin-inline-start: 8px;", "padding-inline-end: 16px;"]
+    },
+    {
+      "component": "components/text/text",
+      "content": "These properties respect the document’s writing mode, automatically adjusting whether your text flows LTR, RTL, or vertically."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Logical vs. Physical Properties"
+    },
+    {
+      "component": "components/text/text",
+      "content": "Here’s how logical properties map to traditional ones:"
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "Margins and Padding",
+      "lines": [
+        "margin-inline-start: 8px; // margin-left",
+        "margin-inline-end: 8px; // margin-right",
+        "margin-block-start: 8px; // margin-top",
+        "margin-block-end: 8px; // margin-bottom",
+        "",
+        "padding-inline-start: 8px; // padding-left",
+        "padding-inline-end: 8px; // padding-right",
+        "padding-block-start: 8px; // padding-top",
+        "padding-block-end: 8px; // padding-bottom"
+      ]
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "Borders",
+      "lines": [
+        "border-inline-start: 8px; // border-left",
+        "border-inline-end: 8px; // border-right",
+        "border-block-start: 8px; // border-top",
+        "border-block-end: 8px; // border-bottom"
+      ]
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "Width and Height",
+      "lines": [
+        "block-size: 100%; // like height",
+        "inline-size: 100%; // like width"
+      ]
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "Width and Height",
+      "lines": [
+        "block-size: 100%; // like height, works also with min and max",
+        "inline-size: 100%; // like width, works also with min and max"
+      ]
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "A Practical Example: Responsive Card Layout"
+    },
+    {
+      "component": "components/text/text",
+      "content": "As a quick example, I created a simple card component or rather the css for it using logical properties:"
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "CSS for a Card Component",
+      "lines": [
+        ".card {",
+        "  display: flex;",
+        "  flex-direction: column;",
+        "  border: 1px solid gray;",
+        "  border-block-end: 2px solid black;",
+        "  padding: 1rem;",
+        "  padding-block-start: 0.5rem;",
+        "  inline-size: 300px;",
+        "  writing-mode: horizontal-tb;",
+        "}"
+      ]
+    },
+    {
+      "component": "components/text/text",
+      "content": "If we are now switching here to <code>writing-mode: vertical-rl;</code> — the layout adjusts automatically without rewriting any CSS. That’s powerful!"
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Browser Support"
+    },
+    {
+      "component": "components/text/text",
+      "content": "CSS Logical Properties are already well-supported in modern browsers like Chrome, Firefox, and even Safari. Firefox even supports shorthand properties like <code>margin-block</code> and <code>padding-inline</code> which is hopefully also supported by the other browsers soon."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Final Thoughts"
+    },
+    {
+      "component": "components/text/text",
+      "content": "It’s fascinating how certain features can exist for years before they catch our attention. Logical properties are exactly that — widely supported but they feel overlooked. Now that I’ve explored them, I appreciate how they simplify layouts and make CSS more flexible across different writing systems."
+    },
+    {
+      "component": "components/text/text",
+      "content": "If you haven’t tried logical properties yet, I highly recommend adding them to your next project!"
+    }
+  ]
+}

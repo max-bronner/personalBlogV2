@@ -6,6 +6,7 @@ import { HotReloadHbs, helpers } from './vite.plugin.js';
 import dataHome from './src/data.js';
 import data20200606 from './src/blog/posts/plants_2020-06-06.json';
 import data20200615 from './src/blog/posts/plants_2020-06-15.json';
+import data20201109 from './src/blog/posts/plants_2020-09-09.json';
 import dataBlog from './src/blog/posts/data.js';
 import fs from 'fs';
 
@@ -18,6 +19,7 @@ const pageData = {
   '/blog/index.html': { articles: dataBlog },
   '/blog/plants_2020-06-06.html': data20200606,
   '/blog/plants_2020-06-15.html': data20200615,
+  '/blog/plants_2020-09-09.html': data20201109,
   '/about/index.html': {
     title: 'About',
   },
@@ -34,6 +36,7 @@ export default defineConfig({
         blog: resolve(__dirname, 'src/blog/index.html'),
         post1: resolve(__dirname, 'src/blog/plants_2020-06-06.html'),
         post2: resolve(__dirname, 'src/blog/plants_2020-06-15.html'),
+        post3: resolve(__dirname, 'src/blog/plants_2020-09-09.html'),
         about: resolve(__dirname, 'src/about/index.html'),
       },
     },
