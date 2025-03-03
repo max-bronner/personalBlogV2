@@ -8,11 +8,6 @@ import data20200606 from './src/blog/posts/plants_2020-06-06.json';
 import data20200615 from './src/blog/posts/plants_2020-06-15.json';
 import data20201109 from './src/blog/posts/plants_2020-09-09.json';
 import dataBlog from './src/blog/posts/data.js';
-import fs from 'fs';
-
-const parseContent = () => {
-  const contentFiles = fs.globSync('./content/**/*.json');
-};
 
 const pageData = {
   '/index.html': dataHome,
