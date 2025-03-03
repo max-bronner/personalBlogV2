@@ -1,4 +1,5 @@
 (() => {
+  const filters = document.querySelector('.blog__filters');
   const posts = document.querySelectorAll('.card');
   const categorySelect = document.getElementById('category-select');
   const sortSelect = document.getElementById('sort-select');
@@ -60,14 +61,16 @@
     });
   };
 
-  categorySelect.addEventListener('change', filterPosts);
-  sortSelect.addEventListener('change', filterPosts);
-  searchButton.addEventListener('click', filterPosts);
-  searchInput.addEventListener('keyup', function (e) {
-    if (e.key === 'Enter') {
-      filterPosts();
-    }
-  });
+  if (filters) {
+    categorySelect.addEventListener('change', filterPosts);
+    sortSelect.addEventListener('change', filterPosts);
+    searchButton.addEventListener('click', filterPosts);
+    searchInput.addEventListener('keyup', function (e) {
+      if (e.key === 'Enter') {
+        filterPosts();
+      }
+    });
+  }
 
   sortPosts('newest');
 })();
