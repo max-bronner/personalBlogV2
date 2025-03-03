@@ -33,6 +33,10 @@
     }
   }
 
+  picture {
+    display: flex;
+  }
+
   &__image {
     border-radius: 8px;
     object-fit: cover;
@@ -40,6 +44,11 @@
     @media (max-width: 919px) {
       display: none;
     }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 
   &__details {
