@@ -4,34 +4,32 @@
     <h1 class="blog__title">Blog</h1>
 
     <div class="blog__count">
-      <span id="showing-count" class="blog__count-showing">6</span> posts found
+      <span id="showing-count" class="blog__count-showing">5</span> posts found
     </div>
 
     <div class="blog__grid">
+      {{#each articles}}
       <article
         class="card"
-        data-category="technology"
-        data-date="2025-02-15"
-        data-views="1250"
+        data-category="{{ this.category }}"
+        data-date="{{ this.date }}"
       >
         <div class="card__image">
-          <img
-            src="/images/IMG_20200606_640.webp"
-            alt="Tech post placeholder"
-            class="card__img"
-          />
+          {{> components/image/image config = this.image imgClass="card__img"}}
         </div>
         <div class="card__content">
-          <span class="card__category">Plants</span>
-          <h2 class="card__title">Back to Green</h2>
-          <p class="card__excerpt">How my home finally became greener</p>
+          <span class="card__category">{{ this.category }}</span>
+          <h2 class="card__title">{{ this.title }}</h2>
+          <p class="card__excerpt">{{ this.description }}</p>
           <div class="card__footer">
             <a href="/blog/plants_2020-06-06" class="card__link">Read More</a>
-            <span class="card__date">Feb 15, 2025</span>
+            <span class="card__date">{{ this.date }}</span>
           </div>
         </div>
       </article>
+      {{/each}}
     </div>
+
     <div class="blog__pagination">
       <button class="blog__pagination-btn blog__pagination-prev" disabled>
         &laquo; Previous
