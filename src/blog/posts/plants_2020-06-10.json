@@ -9,6 +9,7 @@
   },
   "description": "Like many others currently, I’m starting to add plants to my home",
   "date": "June 10, 2020",
+  "category": "Tech",
   "content": [
     {
       "component": "components/text/text",

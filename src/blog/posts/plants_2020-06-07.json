@@ -9,6 +9,7 @@
   },
   "description": "Like many others currently, I’m starting to add plants to my home",
   "date": "June 7, 2020",
+  "category": "Dev",
   "content": [
     {
       "component": "components/text/text",
