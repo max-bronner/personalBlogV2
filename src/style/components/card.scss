@@ -10,6 +10,11 @@
     background-color: var(--hover-bg-color);
     transform: translateY(-4px);
   }
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   &__link:hover {
     text-decoration: none;
@@ -26,6 +31,10 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    height: 100%;
     padding: 1rem;
   }
 
@@ -53,10 +62,9 @@
   &__footer {
     align-items: center;
     display: flex;
-    font-size: 0.85rem;
-    inset: auto 1rem 1rem;
+    font-size: 0.8rem;
     justify-content: space-between;
-    position: absolute;
+    margin-top: auto;
   }
 
   &__subtext {
