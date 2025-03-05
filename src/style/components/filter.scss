@@ -21,12 +21,18 @@
 }
 
 .blog__search-input {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-secondary);
   border: 1px solid var(--primary-grey);
   border-radius: 4px 0 0 4px;
   flex: 1;
   font-size: 0.9rem;
   padding: 0.5rem;
+
+  &:focus,
+  &:hover {
+    border: 1px solid var(--text-primary);
+    outline: none;
+  }
 }
 
 .blog__search-button {
@@ -40,7 +46,7 @@
 }
 
 .blog__search-button:hover {
-  background-color: var(--label-green);
+  background-color: var(--secondary-color);
 }
 
 .blog__category,
@@ -50,11 +56,17 @@
 
 .blog__category-select,
 .blog__sort-select {
-  background-color: var(--white);
+  background-color: var(--bg-color-secondary);
   border: 1px solid var(--primary-grey);
   border-radius: 4px;
   color: var(--text-secondary);
   font-size: 0.9rem;
   padding: 0.5rem;
   width: 100%;
+
+  &:focus,
+  &:hover {
+    border: 1px solid var(--text-primary);
+    outline: none;
+  }
 }
