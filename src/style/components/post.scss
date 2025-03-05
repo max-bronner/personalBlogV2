@@ -2,8 +2,12 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  margin-block: 3rem;
+  margin-bottom: auto;
   max-width: 40rem;
+
+  section {
+    margin-block: 3rem;
+  }
 
   &__title {
     font-size: 3rem;
