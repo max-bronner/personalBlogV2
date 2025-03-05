@@ -1,5 +1,5 @@
 .card {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-secondary);
   border: 1px solid var(--primary-grey);
   border-radius: 8px;
   overflow: hidden;
@@ -9,6 +9,14 @@
   &:hover {
     background-color: var(--hover-bg-color);
     transform: translateY(-4px);
+  }
+
+  &__link:hover {
+    text-decoration: none;
+  }
+
+  &__link:hover &__subtext {
+    color: var(--secondary-color);
   }
 
   &__img {
@@ -52,16 +60,11 @@
     position: absolute;
   }
 
-  &__link {
+  &__subtext {
     color: var(--primary-color);
     font-size: 1.1rem;
     font-weight: 600;
-    text-decoration: none;
     transition: color 0.2s;
-
-    &:hover {
-      color: var(--secondary-color);
-    }
   }
 
   &__date {

@@ -1,0 +1,13 @@
+<main class="post">
+  <section>
+    <h1 class="post__title">About me</h1>
+    {{> components/text/text content="My name is Max and I'm a Frontend developer who's all about making the web faster and more accessible. I believe the web should be a transparent place that provides a great user experience for everybody. As an expert in web performance, my goal is to build fast, efficient and robust websites. I am also a strong advocate for open-source, which allows for greater collaboration and innovation in the pursuit of this goal."}}
+
+    {{> components/text/text content="But I'm not all work and no play - when I'm not coding, you can find me gaming/modding, hiking, puzzling, gardening, fishing and barkeeping. I've also have a passion for giving talks about web development and other tech-related topics."}}
+
+    {{> components/text/text content="If you have any questions about my work or would like to learn more about what I do, please don't hesitate to reach out to me."}}
+    {{#each content}}
+    {{> (lookup this 'component') }}
+    {{/each}}
+  </section>
+</main>
