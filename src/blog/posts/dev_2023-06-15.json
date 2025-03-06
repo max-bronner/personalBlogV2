@@ -1,0 +1,103 @@
+{
+  "title": "CSS Container Queries",
+  "path": "/blog/dev_2023-06-15",
+  "titleHtml": "CSS Container Queries",
+  "image": {
+    "src": "IMG_20230615_preview_450",
+    "srcBig": "IMG_20230615_preview_450",
+    "hasDescription": false,
+    "height": 300,
+    "width": 450
+  },
+  "description": "Are CSS Container Queries the game-changer we were waiting for? A monologue about how I feel about them.",
+  "date": "June 15, 2023",
+  "category": "Dev",
+  "content": [
+    {
+      "component": "components/text/text",
+      "content": "For years, CSS Container Queries were one of the most requested features web developers were asking for. I had countless discussions with others about how they could solve the limitations of media queries. Now that they’re finally here, I’ve used them over the last couple months — with mixed feelings."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "The Hype Around Container Queries"
+    },
+    {
+      "component": "components/text/text",
+      "content": "If you’ve been in web development for a while, you know the occasional struggles of writing clean code for responsive components. Traditional media queries focus solely on the screen size, which means they work well for general layout adjustments at specific breakpoints. But if the design requires more variety for different screen sizes, it gets easily messy."
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "Traditional Media Query",
+      "lines": [
+        "@media (min-width: 600px) {",
+        "  .card {",
+        "    /* Styles for card component */",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "component": "components/text/text",
+      "content": "Things like nested components, dynamic sidebars and menues, or content blocks appearing in different contexts often require complex calculations, overlapping breakpoints, and maintaining consistency and redundancy across the entire codebase. Some of this can be streamlined with preprocessors like Sass, but the underlying problem remains."
+    },
+    {
+      "component": "components/text/text",
+      "content": "Container Queries promised to change that. Instead of designing components based on the entire viewport, we can apply styles to them depending on their own dimensions. This approach allows for better scoping and reduces dependencies on the rest of the page structure."
+    },
+    {
+      "component": "components/codeBlock/codeBlock",
+      "title": "Container Query Example",
+      "lines": [
+        "@container (min-width: 400px) {",
+        "  .card {",
+        "    /* Styles for card component */",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Modern Web Development"
+    },
+    {
+      "component": "components/text/text",
+      "content": "Web development has changed a lot in the last decade. We’ve moved from static, rigid layouts to fluid, flexible designs. I still remember when tables were commonly used for layouting, which got 'fixed' with the introduction of Flexbox and later Grid. Even designers adapted, favoring more consistent, scalable, and adaptable layouts."
+    },
+    {
+      "component": "components/text/text",
+      "content": "And that’s where my uncertainty about the hype around Container Queries comes in. Many of the challenges they were meant to address just don’t seem as relevant anymore."
+    },
+    {
+      "component": "components/text/text",
+      "content": "But that doesn’t mean container queries are useless. Their ability to scope styles to an element’s own size is still a massive improvement. It makes components more self-contained and easier to reuse across different parts of a website without worrying about external factors. The component just adapts automatically."
+    },
+    {
+      "component": "components/text/text",
+      "content": "In fact, they may be more useful than ever. Fluid layouts thrive on adaptability, and in the right context, Container Queries can help refine that adaptability even further."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Finding the Right Balance"
+    },
+    {
+      "component": "components/text/text",
+      "content": "At first, I used Container Queries everywhere. But I quickly realized I was overcomplicating things. In many cases, traditional CSS solutions were just as effective, if not simpler."
+    },
+    {
+      "component": "components/text/text",
+      "content": "So, where do I stand now? I’m still figuring out the balance. I may continue relying on media queries for general layout shifts while gradually incorporating Container Queries where they truly make a difference. It really depends on how web development evolves."
+    },
+    {
+      "component": "components/text/text",
+      "content": "Of course, there will always be cases where media or container queries are necessary—like collapsing menus on mobile. But the era of designing entirely separate layouts for different devices? That’s long gone."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Final Thoughts"
+    },
+    {
+      "component": "components/text/text",
+      "content": "I’m glad Container Queries exist, and they’re a powerful addition to our toolbox. But do they live up to the hype? Right now, for me, the answer is no. But that doesn’t mean they won’t become more essential in the future."
+    }
+  ]
+}
