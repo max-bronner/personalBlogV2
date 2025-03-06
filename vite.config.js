@@ -7,6 +7,7 @@ import dataHome from './src/data.js';
 import data20200606 from './src/blog/posts/plants_2020-06-06.json';
 import data20200615 from './src/blog/posts/plants_2020-06-15.json';
 import data20201109 from './src/blog/posts/plants_2020-09-09.json';
+import data20230615 from './src/blog/posts/dev_2023-06-15.json';
 import dataBlog from './src/blog/posts/data.js';
 
 const pageData = {
@@ -15,6 +16,7 @@ const pageData = {
   '/blog/plants_2020-06-06.html': data20200606,
   '/blog/plants_2020-06-15.html': data20200615,
   '/blog/plants_2020-09-09.html': data20201109,
+  '/blog/dev_2023-06-15.html': data20230615,
   '/about/index.html': {
     title: 'About',
   },
@@ -32,6 +34,7 @@ export default defineConfig({
         post1: resolve(__dirname, 'src/blog/plants_2020-06-06.html'),
         post2: resolve(__dirname, 'src/blog/plants_2020-06-15.html'),
         post3: resolve(__dirname, 'src/blog/plants_2020-09-09.html'),
+        post4: resolve(__dirname, 'src/blog/dev_2023-06-15.html'),
         about: resolve(__dirname, 'src/about/index.html'),
       },
     },
