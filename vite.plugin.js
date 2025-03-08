@@ -39,4 +39,13 @@ export const helpers = {
       return dateObject.toLocaleDateString();
     }
   },
+  replaceSpaces: function (string) {
+    if (typeof string !== 'string') return '';
+    return {
+      __html: string.replace(/ /g, '&nbsp;'),
+      toHTML: function () {
+        return this.__html;
+      },
+    };
+  },
 };
