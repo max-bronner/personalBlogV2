@@ -41,6 +41,7 @@ export const helpers = {
   },
   replaceSpaces: function (string) {
     if (typeof string !== 'string') return '';
+    // workaround for Handlebars not rendering spaces
     return {
       __html: string.replace(/ /g, '&nbsp;'),
       toHTML: function () {
