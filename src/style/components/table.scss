@@ -19,5 +19,14 @@
     border-spacing: 0;
     text-align: left;
     width: 100%;
+
+    thead th {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    thead tr:last-child th {
+      border-bottom: 1px solid var(--primary-grey);
+    }
   }
 }
