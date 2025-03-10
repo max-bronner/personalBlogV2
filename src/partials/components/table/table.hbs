@@ -7,5 +7,17 @@
     </div>
   {{/if}}
   <table>
+    <thead>
+      {{#each headers}}
+        <tr>
+          {{#each this}}
+            <th 
+            >
+              {{label}}
+            </th>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </thead>
   </table>
 </div>
