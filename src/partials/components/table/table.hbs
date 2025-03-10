@@ -21,5 +21,17 @@
         </tr>
       {{/each}}
     </thead>
+    <tbody>
+      {{#each rows}}
+        <tr>
+          {{#each cells}}
+            <td 
+              {{#if colspan}}colspan="{{colspan}}"{{/if}}
+              {{#if rowspan}}rowspan="{{rowspan}}"{{/if}}
+            >{{value}}</td>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </tbody>
   </table>
 </div>
