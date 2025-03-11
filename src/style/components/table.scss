@@ -52,10 +52,6 @@
       background-color: var(--bg-color);
     }
 
-    td {
-      color: var(--text-secondary);
-    }
-
     td:empty::after {
       content: '-';
     }
