@@ -20,15 +20,18 @@
     text-align: left;
     width: 100%;
 
+    th,
     td {
       border-right: 1px solid var(--primary-grey);
       border-top: 1px solid var(--primary-grey);
       padding: 0.75rem 1rem;
     }
 
+    th:last-child,
     td:last-child {
       border-right: none;
     }
+
     thead th {
       color: var(--primary-color);
       font-weight: 600;
