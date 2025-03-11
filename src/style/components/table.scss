@@ -40,5 +40,12 @@
     thead tr:last-child th {
       border-bottom: 1px solid var(--primary-grey);
     }
+
+    tbody th {
+      background-color: var(--bg-color-secondary);
+      border-right-width: 2px;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
   }
 }
