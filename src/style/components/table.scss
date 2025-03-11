@@ -47,6 +47,11 @@
       color: var(--primary-color);
       font-weight: 600;
     }
+
+    tbody tr:nth-child(even) {
+      background-color: var(--bg-color);
+    }
+
     td {
       color: var(--text-secondary);
     }
