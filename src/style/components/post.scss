@@ -32,7 +32,9 @@
 
   img {
     border: 1px solid var(--border-color);
+    height: auto;
     margin-top: 1.5rem;
+    max-width: 100%;
   }
 
   figcaption {
