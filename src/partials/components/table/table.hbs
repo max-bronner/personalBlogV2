@@ -24,6 +24,11 @@
     <tbody>
       {{#each rows}}
         <tr>
+          {{#if rowHeader}}
+            <th {{#if rowspan}}rowspan="{{rowspan}}"{{/if}}>
+              {{rowHeader}}
+            </th>
+          {{/if}}
           {{#each cells}}
             <td 
               {{#if colspan}}colspan="{{colspan}}"{{/if}}
