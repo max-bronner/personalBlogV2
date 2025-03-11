@@ -55,6 +55,11 @@
     td {
       color: var(--text-secondary);
     }
+
+    td:empty::after {
+      content: '-';
+    }
+
     tbody tr:last-child th,
     tbody tr:last-child td {
       border-bottom: none;
