@@ -1,3 +1,9 @@
-<h2 class="post__subtitle">
-  {{{ heading }}}
-</h2>
+{{#if type}}
+  <{{ type }} class="post__subtitle">
+    {{{ heading }}}
+  </{{ type }}>
+{{else}}
+  <h2 class="post__subtitle">
+    {{{ heading }}}
+  </h2>
+{{/if}}

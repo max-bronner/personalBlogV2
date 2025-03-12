@@ -6,5 +6,5 @@
   </div>
   <pre
     class="code-content"
-  ><code>{{#each lines}}{{this}}{{#if @last}}{{else}}<br>{{/if}}{{/each}}</code></pre>
+  ><code>{{#each lines}}{{replaceSpaces this}}{{#if @last}}{{else}}<br>{{/if}}{{/each}}</code></pre>
 </div>

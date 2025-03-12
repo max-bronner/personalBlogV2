@@ -1,0 +1,42 @@
+
+
+<div class="table">
+  {{#if title}}
+    <div class="table__title">
+      {{ title }}
+    </div>
+  {{/if}}
+  <table>
+    <thead>
+      {{#each headers}}
+        <tr>
+          {{#each this}}
+            <th 
+              {{#if colspan}}colspan="{{colspan}}"{{/if}}
+              {{#if rowspan}}rowspan="{{rowspan}}"{{/if}}
+            >
+              {{label}}
+            </th>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </thead>
+    <tbody>
+      {{#each rows}}
+        <tr>
+          {{#if rowHeader}}
+            <th {{#if rowspan}}rowspan="{{rowspan}}"{{/if}}>
+              {{rowHeader}}
+            </th>
+          {{/if}}
+          {{#each cells}}
+            <td 
+              {{#if colspan}}colspan="{{colspan}}"{{/if}}
+              {{#if rowspan}}rowspan="{{rowspan}}"{{/if}}
+            >{{value}}</td>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

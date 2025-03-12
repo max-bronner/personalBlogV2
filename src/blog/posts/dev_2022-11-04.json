@@ -1,0 +1,403 @@
+{
+  "title": "The Misconception About Image Formats",
+  "path": "/blog/dev_2022-11-04",
+  "titleHtml": "The Misconception About Image Formats",
+  "image": {
+    "src": "IMG_20221104_preview_450",
+    "srcBig": "IMG_20221104_preview_450",
+    "hasDescription": false,
+    "height": 300,
+    "width": 450
+  },
+  "description": "A monologue about image formats and their impact on web performance.",
+  "date": "November 4, 2022",
+  "category": "Dev",
+  "content": [
+    {
+      "component": "components/text/text",
+      "content": "Recently, Safari started to partially support the AVIF format as the last major browser. A great improvement for web performance. AVIF is one of the more efficient image formats out there, promising smaller file sizes with better quality. And some developers might be tempted to switch in general to AVIF to maximize performance."
+    },
+    {
+      "component": "components/text/text",
+      "content": "But one disclaimer first: Image-related performance issues are actually less common than we think. Often the improvements are just incremental. Other factors like lazy loading, efficient caching, backend optimizations, reducing scripts, etc. can have a much bigger impact on overall performance. But let's focus here solely on images, even then it's not as simple as just switching to the newest format available."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "The Basics"
+    },
+    {
+      "component": "components/text/text",
+      "content": "Before diving into the more complicated issues, let's go over some fundamentals of image formats and optimization. If you're already familiar with web performance, you probably want to skip this part."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Lossless vs. Lossy Compression",
+      "type": "h3"
+    },
+    {
+      "component": "components/text/text",
+      "content": "As the name says, \"lossless\" compression keeps all image details intact, while \"lossy\" is able to achieve higher compression rates by permanently removing some data. Lossless is often a good choice for photographers or artists who want to show their work on the web. But for web performance, lossy compression is generally the better option. Depending on the final image quality the file size can be significantly reduced while there is no noticeable difference for the end user. Some formats even support both lossless and lossy compression. AVIF and WebP, for example, can be used in either way."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "More Than Just Compression",
+      "type": "h3"
+    },
+    {
+      "component": "components/text/text",
+      "content": "It's not only about choosing between lossy and lossless. Other factors matter too: <ul><li>Alpha Channel: Not every format supports transparency</li><li>Animation: use animated WebP/AVIF, not GIFs</li><li>Color Depth/Range: Different formats have different bit depth and color space support</li><li>Metadata: Important for e.g. professional photographers</li><li>Progressive Loading: Not commonly used anymore</li><li>Browser support: In some cases specific browser support is required e.g. IE, fallback can be used</li><li>And probably many more</li></ul>"
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Find The Right Format"
+    },
+    {
+      "component": "components/text/text",
+      "content": "Even if the newest image format checks all the right boxes on paper, it might still not be the right one to use. As an example I converted several photos and some vector graphics into AVIF, WebP, JPEG, and PNG with different resolutions and quality settings. My goal is not to provide proof of when to use which image format, but rather to highlight patterns and trade-offs that might help with finding the right formats."
+    },
+    {
+      "component": "components/text/text",
+      "content": "To keep the testing consistent, I randomly picked five photos and vector graphics from the web. I then calculated the average file size from these five files for each test case. For lossy formats, I tested compression levels at 30%, 60%, and 90% quality. The images were resized to 1440p, 1080p, and 480p to cover different scenarios."
+    },
+    {
+      "component": "components/table/table",
+      "title": "1440p Image File Sizes",
+      "headers": [
+        [
+          { "label": "Type" },
+          { "label": "Quality" },
+          { "label": "AVIF" },
+          { "label": "WebP" },
+          { "label": "JPEG" },
+          { "label": "PNG" }
+        ]
+      ],
+      "rows": [
+        {
+          "rowHeader": "Photo",
+          "rowspan": 4,
+          "cells": [
+            { "value": "30%" },
+            { "value": "30 KB" },
+            { "value": "64 KB" },
+            { "value": "120 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "60%" },
+            { "value": "120 KB" },
+            { "value": "102 KB" },
+            { "value": "194 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "90%" },
+            { "value": "422 KB" },
+            { "value": "286 KB" },
+            { "value": "473 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "Lossless" },
+            { "value": "2060 KB" },
+            { "value": "2499 KB" },
+            {},
+            { "value": "3418 KB" }
+          ]
+        },
+        {
+          "rowHeader": "Vector Graphic",
+          "rowspan": 4,
+          "cells": [
+            { "value": "30%" },
+            { "value": "9 KB" },
+            { "value": "28 KB" },
+            { "value": "79 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "60%" },
+            { "value": "21 KB" },
+            { "value": "35 KB" },
+            { "value": "95 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "90%" },
+            { "value": "36 KB" },
+            { "value": "50 KB" },
+            { "value": "136 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "Lossless" },
+            { "value": "75 KB" },
+            { "value": "45 KB" },
+            {},
+            { "value": "181 KB" }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "components/table/table",
+      "title": "1080p Image File Sizes",
+      "headers": [
+        [
+          { "label": "Type" },
+          { "label": "Quality" },
+          { "label": "AVIF" },
+          { "label": "WebP" },
+          { "label": "JPEG" },
+          { "label": "PNG" }
+        ]
+      ],
+      "rows": [
+        {
+          "rowHeader": "Photo",
+          "rowspan": 4,
+          "cells": [
+            { "value": "30%" },
+            { "value": "17 KB" },
+            { "value": "34 KB" },
+            { "value": "64 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "60%" },
+            { "value": "63 KB" },
+            { "value": "55 KB" },
+            { "value": "102 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "90%" },
+            { "value": "196 KB" },
+            { "value": "145 KB" },
+            { "value": "234 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "Lossless" },
+            { "value": "982 KB" },
+            { "value": "1136 KB" },
+            {},
+            { "value": "1580 KB" }
+          ]
+        },
+        {
+          "rowHeader": "Vector Graphic",
+          "rowspan": 4,
+          "cells": [
+            { "value": "30%" },
+            { "value": "5 KB" },
+            { "value": "10 KB" },
+            { "value": "27 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "60%" },
+            { "value": "10 KB" },
+            { "value": "13 KB" },
+            { "value": "34 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "90%" },
+            { "value": "17 KB" },
+            { "value": "19 KB" },
+            { "value": "50 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "Lossless" },
+            { "value": "33 KB" },
+            { "value": "20 KB" },
+            {},
+            { "value": "72 KB" }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "components/table/table",
+      "title": "480p Image File Sizes",
+      "headers": [
+        [
+          { "label": "Type" },
+          { "label": "Quality" },
+          { "label": "AVIF" },
+          { "label": "WebP" },
+          { "label": "JPEG" },
+          { "label": "PNG" }
+        ]
+      ],
+      "rows": [
+        {
+          "rowHeader": "Photo",
+          "rowspan": 4,
+          "cells": [
+            { "value": "30%" },
+            { "value": "7 KB" },
+            { "value": "11 KB" },
+            { "value": "21 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "60%" },
+            { "value": "19 KB" },
+            { "value": "16 KB" },
+            { "value": "31 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "90%" },
+            { "value": "53 KB" },
+            { "value": "37 KB" },
+            { "value": "58 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "Lossless" },
+            { "value": "232 KB" },
+            { "value": "235 KB" },
+            {},
+            { "value": "363 KB" }
+          ]
+        },
+        {
+          "rowHeader": "Vector Graphic",
+          "rowspan": 4,
+          "cells": [
+            { "value": "30%" },
+            { "value": "3.6 KB" },
+            { "value": "3.9 KB" },
+            { "value": "13 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "60%" },
+            { "value": "5.5 KB" },
+            { "value": "5.3 KB" },
+            { "value": "16 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "90%" },
+            { "value": "8.3 KB" },
+            { "value": "8.3 KB" },
+            { "value": "23 KB" },
+            {}
+          ]
+        },
+        {
+          "cells": [
+            { "value": "Lossless" },
+            { "value": "16 KB" },
+            { "value": "10 KB" },
+            {},
+            { "value": "31 KB" }
+          ]
+        }
+      ]
+    },
+    {
+      "component": "components/text/text",
+      "content": "As the results show there is no clear winner. Still some general patterns can be observed though they are not always true."
+    },
+    {
+      "component": "components/text/text",
+      "content": "AVIF works well for higher compression rates and bigger resolutions. At low quality settings (30%), AVIF mostly produces the smallest files in comparison. This makes it a fitting choice for images where some quality losses are acceptable."
+    },
+    {
+      "component": "components/text/text",
+      "content": "WebP on the other hand seems to handle generally higher quality settings and lower resolutions better. This makes WebP often a good choice if balancing between quality for smaller images and size is required."
+    },
+    {
+      "component": "components/text/text",
+      "content": "For lossless compression, AVIF and WebP are mostly on par with personally giving the slight edge to WebP in most cases. But that said, if AVIF shows better results the size difference tends to be more significant compared to WebP."
+    },
+    {
+      "component": "components/text/text",
+      "content": "Although not shown in the results, I've personally observed issues with AVIF when handling noise-heavy images. Especially in such cases testing is essential to figure out if WebP is the better option."
+    },
+    {
+      "component": "components/text/text",
+      "content": "While AVIF and WebP generally outperform JPEG and PNG, they are not entirely obsolete. Occasionally, I come across niche cases where JPEG or PNG deliver better results, particularly for smaller and simpler images. This was one reason I included vector graphics in my tests, to illustrate this point in certain scenarios. Unfortunately, the results didn't turn out as expected."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "The Best Approach"
+    },
+    {
+      "component": "components/text/text",
+      "content": "In short: Testing. Rather than blindly choosing a format, I normally use Gimp as a render engine for my primary images to generate different formats and sizes with a variety of settings. I compare the results and choose the subjective best versions for each breakpoint. This might sound time intense but through a simple script it costs me only a couple of minutes. For images that are not as important, I usually stick with WebP."
+    },
+    {
+      "component": "components/text/text",
+      "content": "So if I had to give some rules of thumb for a good baseline strategy, I would recommend the following points: <ul><li>Use AVIF and WebP as primary formats, testing both to compare file sizes.</li><li>Stick to 60-75% quality for standard images, and 30% for less important ones.</li><li>Keep JPEG and PNG as fallbacks</li><li>Prioritize SVG for vector-based graphics. I only used them here with other formats for demonstration purposes.</li></ul>"
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Decoding"
+    },
+    {
+      "component": "components/text/text",
+      "content": "One more aspect ignored so far but worth mentioning is how different formats handle decoding. Some formats may be optimized for smaller file sizes but take longer and require more browser resources to decode. Others may load faster but come with larger file sizes. Unfortunately, this is far beyond my expertise, and I couldn't find any helpful articles about it either. Still, it might be another factor to consider, though I doubt it has any significant real-world impact."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "New Formats"
+    },
+    {
+      "component": "components/text/text",
+      "content": "New image formats emerge all the time, but the differences in compression efficiency are becoming increasingly marginal. JPEG-XL, for example, promised to be the next step forward for web development. However, its benefits have been so minor compared to the existing formats that only Chrome implemented it so far and there are already talks about removing it again."
+    },
+    {
+      "component": "components/text/text",
+      "content": "It's likely that we'll see several more iterations of image formats before the improvements become significant enough for further adoptions. And even then the browser vendors need to agree on a common standard. Until then, we can stick to our current formats, and reigniting the debate once more when the time comes."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "Conclusion"
+    },
+    {
+      "component": "components/text/text",
+      "content": "At the end of the day, blindly using the newest format won't necessarily give you the best results. Testing different formats for different images is the only way to find the right balance."
+    }
+  ]
+}

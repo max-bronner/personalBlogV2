@@ -5,7 +5,7 @@
   font-family:
     'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   margin: 1rem 0;
-  overflow: hidden;
+  max-width: calc(100vw - 4rem); /* Limit to viewport width */
 }
 
 .code-block-header {
