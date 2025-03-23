@@ -1,0 +1,50 @@
+{
+  "title": "One To Rule Them All",
+  "path": "/blog/general_2025-02-18",
+  "titleHtml": "One To Rule Them All",
+  "image": {
+    "src": "IMG_20211028_preview_450",
+    "srcBig": "IMG_20211028_preview_450",
+    "hasDescription": false,
+    "height": 300,
+    "width": 450,
+    "format": "svg"
+  },
+  "description": "An update on the current state of my personal website, the blog, and what’s coming next.",
+  "date": "February 18, 2025",
+  "category": "Dev",
+  "content": [
+    {
+      "component": "components/text/text",
+      "content": "You’ve probably noticed that this website has undergone some changes recently. With this post, I’d like to share an update on where things stand and why there’s suddenly a blog here, too."
+    },
+    {
+      "component": "components/text/text",
+      "content": "At the start of this year, I realized I hadn’t been updating this website much, I wasn’t happy with its design either. And as I dug through some older projects, I started reminiscing about the way web development was when I first got into it — good ol’ times."
+    },
+    {
+      "component": "components/text/text",
+      "content": "That’s when I decided it was time for a fresh look and setup. But instead of going with the latest frameworks, I wanted to recreate a website using a tech stack that’s more in line with how things were done around 10 years ago. I’m curious to see if this approach is still viable for modern web development."
+    },
+    {
+      "component": "components/heading/heading",
+      "heading": "The Blog: A New Addition"
+    },
+    {
+      "component": "components/text/text",
+      "content": "Now, here’s something that might surprise you: I’ve actually had a blog for the past few years. It wasn’t anything crazy or fancy — just some thoughts and guides that I thought were worth scribbling down."
+    },
+    {
+      "component": "components/text/text",
+      "content": "Since the domain I was using for that blog is expiring soon I decided to move everything over here, especially since I didn’t use this domain to it’s full potential neither."
+    },
+    {
+      "component": "components/text/text",
+      "content": "So you’ll probably start seeing some older posts pop up as I migrate the content. But don’t worry, knowing myself that will take at least a few months to get everything sorted and formatted. In the meantime, I’ll definitely be adding new posts, including updates on my experience working with this older tech stack."
+    },
+    {
+      "component": "components/text/text",
+      "content": "I hope you enjoy the new look and the new content! Thanks for being here and following along. See ya in the next post!"
+    }
+  ]
+}
