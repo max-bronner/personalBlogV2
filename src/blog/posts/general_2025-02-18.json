@@ -12,7 +12,7 @@
   },
   "description": "An update on the current state of my personal website, the blog, and what’s coming next.",
   "date": "February 18, 2025",
-  "category": "Dev",
+  "category": "General",
   "content": [
     {
       "component": "components/text/text",
