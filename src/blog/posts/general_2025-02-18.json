@@ -3,12 +3,11 @@
   "path": "/blog/general_2025-02-18",
   "titleHtml": "One To Rule Them All",
   "image": {
-    "src": "IMG_20211028_preview_450",
-    "srcBig": "IMG_20211028_preview_450",
+    "src": "IMG_20250218_preview_450",
+    "srcBig": "IMG_20250218_preview_450",
     "hasDescription": false,
     "height": 300,
-    "width": 450,
-    "format": "svg"
+    "width": 450
   },
   "description": "An update on the current state of my personal website, the blog, and what’s coming next.",
   "date": "February 18, 2025",
