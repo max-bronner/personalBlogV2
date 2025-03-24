@@ -1,14 +1,14 @@
 <figure>
   <picture>
     <source
-      srcset="/images/{{srcBig}}.{{#if format}}{{format}}{{else}}webp{{/if}} 2x, /images/{{src}}.webp 1x"
+      srcset="/images/{{srcBig}}.{{#if format}}{{format}}{{else}}webp{{/if}} 2x, /images/{{src}}.{{#if format}}{{format}}{{else}}webp{{/if}} 1x"
       type="image/webp"
     />
 
     <img
       {{#if imgClass}} class="{{ imgClass }}"{{/if}}
-      src="/images/{{ src }}.jpeg"
-      srcset="/images/{{srcBig}}.jpeg 2x, /images/{{src}}.jpeg 1x"
+      src="/images/{{ src }}.{{#if format}}{{format}}{{else}}webp{{/if}}"
+      srcset="/images/{{srcBig}}.{{#if format}}{{format}}{{else}}webp{{/if}} 2x, /images/{{src}}.{{#if format}}{{format}}{{else}}webp{{/if}} 1x"
       alt="{{ alt }}"
       width="{{ width }}"
       height="{{ height }}"
