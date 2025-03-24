@@ -1,7 +1,7 @@
 <figure>
   <picture>
     <source
-      srcset="/images/{{srcBig}}.webp 2x, /images/{{src}}.webp 1x"
+      srcset="/images/{{srcBig}}.{{#if format}}{{format}}{{else}}webp{{/if}} 2x, /images/{{src}}.webp 1x"
       type="image/webp"
     />
 

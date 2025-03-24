@@ -7,7 +7,8 @@
     "srcBig": "IMG_20221104_preview_450",
     "hasDescription": false,
     "height": 300,
-    "width": 450
+    "width": 450,
+    "format": "svg"
   },
   "description": "A monologue about image formats and their impact on web performance.",
   "date": "November 4, 2022",
