@@ -11,6 +11,7 @@ import data20211028 from './src/blog/posts/dev_2021-10-28.json';
 import data20221104 from './src/blog/posts/dev_2022-11-04.json';
 import data20230615 from './src/blog/posts/dev_2023-06-15.json';
 import data20250218 from './src/blog/posts/general_2025-02-18.json';
+import data20250326 from './src/blog/posts/dev_2025-03-26.json';
 import dataBlog from './src/blog/posts/data.js';
 
 const pageData = {
@@ -23,6 +24,7 @@ const pageData = {
   '/blog/dev_2022-11-04.html': data20221104,
   '/blog/dev_2023-06-15.html': data20230615,
   '/blog/general_2025-02-18.html': data20250218,
+  '/blog/dev_2025-03-26.html': data20250326,
   '/about/index.html': {
     title: 'About',
   },
@@ -44,6 +46,7 @@ export default defineConfig({
         post5: resolve(__dirname, 'src/blog/dev_2022-11-04.html'),
         post6: resolve(__dirname, 'src/blog/dev_2023-06-15.html'),
         post7: resolve(__dirname, 'src/blog/general_2025-02-18.html'),
+        post8: resolve(__dirname, 'src/blog/dev_2025-03-26.html'),
         about: resolve(__dirname, 'src/about/index.html'),
       },
     },
