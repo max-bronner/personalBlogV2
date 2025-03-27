@@ -7,7 +7,8 @@
     "srcBig": "IMG_20250326_preview_450",
     "hasDescription": false,
     "height": 300,
-    "width": 450
+    "width": 450,
+    "eagerLoaded": true
   },
   "description": "A GIMP plugin for exporting images optimized for web development.",
   "date": "March 26, 2025",
