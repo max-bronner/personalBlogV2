@@ -292,15 +292,15 @@
     },
     {
       "component": "components/text/text",
-      "content": "Feel free to modify the script to fit your needs! You can adapt, add or remove export options, customize or add new functionalities, etc. For details on customization, check the GIMP buildins documentation under <code>Help > Procedure Browser</code> and https://script-fu.github.io/funky/."
+      "content": "Feel free to modify the script to fit your needs! You can adapt, add or remove export options, customize or add new functionalities, etc. For details on customization, check the GIMPs buildins Procedure Browser <code>Help > Procedure Browser</code> and <a href=\"https://script-fu.github.io/funky/\">Funky</a>."
     },
     {
       "component": "components/text/text",
-      "content": "I plan to add some more functionality in the future as well as a console command to open up the possibility to integrate the script into a build process."
+      "content": "I plan to add some more functionality in the future as well as console support to open up the possibility to integrate the script into a build process."
     },
     {
       "component": "components/text/text",
-      "content": "This is the link to the repository: https://github.com/max-bronner/gimpPluginRenderEngine"
+      "content": "This is the link to the repository: <a href=\"https://github.com/max-bronner/gimp3-image-export-plugin\">GIMP Export Plugin</a>"
     },
     {
       "component": "components/text/text",
