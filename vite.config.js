@@ -27,7 +27,7 @@ const posts = fs.readdirSync(postDir).filter((file) => file !== 'data.js');
 posts.forEach((post) => {
   console.log(post);
   const postName = post.replace('.json', '');
-  const postPath = `/blog/${post.replace('.json', '')}.html`;
+  const postPath = `/blog/${postName}.html`;
   const postData = JSON.parse(fs.readFileSync(`${postDir}/${post}`, 'utf-8'));
 
   pageData[postPath] = postData;
