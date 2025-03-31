@@ -31,6 +31,7 @@ posts.forEach((post) => {
   const postData = JSON.parse(fs.readFileSync(`${postDir}/${post}`, 'utf-8'));
 
   pageData[postPath] = postData;
+  rollupInput[postName] = resolve(__dirname, `src/blog/${postName}.html`);
 });
 
 export default defineConfig({
