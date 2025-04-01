@@ -28,6 +28,10 @@
 
   &__text {
     margin-block: 1rem;
+
+    code {
+      overflow-wrap: anywhere;
+    }
   }
 
   img {
