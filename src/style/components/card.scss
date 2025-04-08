@@ -16,6 +16,7 @@
     height: 100%;
   }
 
+  &__link,
   &__link:hover {
     text-decoration: none;
   }
@@ -75,5 +76,9 @@
 
   &__date {
     color: var(--quote-color);
+  }
+
+  &--disabled {
+    pointer-events: none;
   }
 }
