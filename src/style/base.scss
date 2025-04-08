@@ -18,15 +18,19 @@ footer {
 
 a {
   color: inherit;
-  outline: none;
-  text-decoration: none;
-}
 
-a:hover,
-a:focus {
-  color: var(--secondary-color);
-  text-decoration: underline;
-  fill: var(--secondary-color);
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    fill: var(--secondary-color);
+  }
+
+  &:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid var(--bg-color);
+  }
 }
 
 a:active {
