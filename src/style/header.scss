@@ -7,10 +7,18 @@
 
   &__logo {
     font-size: 2rem;
+    line-height: 2.2rem;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      text-decoration-color: var(--secondary-color);
+    }
 
     @media (max-width: 919px) {
-      font-size: 1.35rem;
+      font-size: 1.5rem;
       font-weight: 500;
+      line-height: 1.8rem;
     }
 
     .homepage & {
@@ -27,5 +35,9 @@
         color: var(--bg-color);
       }
     }
+  }
+
+  &__link {
+    text-decoration: none;
   }
 }

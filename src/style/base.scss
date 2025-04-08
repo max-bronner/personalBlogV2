@@ -1,16 +1,14 @@
 body {
   background: var(--bg-color);
   color: var(--text-primary);
-  display: flex;
-  flex-direction: column;
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
     Cantarell, 'Helvetica Neue', sans-serif;
+  margin-inline: 2rem;
   min-height: 100vh;
-  padding-inline: 4rem;
 
-  @media (max-width: 919px) {
-    padding-inline: 2rem;
+  @media (min-width: 920px) {
+    margin-inline: 4rem;
   }
 }
 
@@ -20,15 +18,19 @@ footer {
 
 a {
   color: inherit;
-  outline: none;
-  text-decoration: none;
-}
 
-a:hover,
-a:focus {
-  color: var(--secondary-color);
-  text-decoration: underline;
-  fill: var(--secondary-color);
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    fill: var(--secondary-color);
+  }
+
+  &:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid var(--bg-color);
+  }
 }
 
 a:active {
