@@ -6,10 +6,10 @@
 }
 
 .homepage .footer-copy {
-  color: var(--bg-color);
+  color: var(--text-primary);
 
-  @media (max-width: 919px) {
-    color: var(--text-primary);
+  @media (min-width: 920px) {
+    color: var(--bg-color);
   }
 }
 
