@@ -6,8 +6,8 @@
   position: sticky;
 
   &__logo {
-    font-size: 2rem;
-    line-height: 2.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 
     &:hover,
     &:focus,
@@ -15,10 +15,9 @@
       text-decoration-color: var(--secondary-color);
     }
 
-    @media (max-width: 919px) {
-      font-size: 1.5rem;
-      font-weight: 500;
-      line-height: 1.8rem;
+    @media (min-width: 920px) {
+      font-size: 2rem;
+      line-height: 2.2rem;
     }
 
     .homepage & {
@@ -27,12 +26,17 @@
   }
 
   &__menu {
+    color: var(--text-primary);
     display: flex;
     gap: 1.5rem;
 
-    @media (max-width: 919px) {
+    .homepage & {
+      color: var(--bg-color);
+    }
+
+    @media (min-width: 920px) {
       .homepage & {
-        color: var(--bg-color);
+        color: var(--text-primary);
       }
     }
   }
