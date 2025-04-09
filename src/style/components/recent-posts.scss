@@ -4,11 +4,11 @@
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1rem;
   width: max(100%, 614px);
 
-  @media (max-width: 919px) {
-    padding: 1rem;
+  @media (min-width: 920px) {
+    padding: 1.5rem;
   }
 
   &__link {
@@ -39,10 +39,11 @@
 
   &__image {
     border-radius: 8px;
+    display: none;
     object-fit: cover;
 
-    @media (max-width: 919px) {
-      display: none;
+    @media (min-width: 920px) {
+      display: block;
     }
   }
 
