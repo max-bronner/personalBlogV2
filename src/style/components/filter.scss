@@ -3,14 +3,15 @@
 }
 
 .blog__filters-options {
-  align-items: center;
+  align-items: stretch;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
 
-  @media (max-width: 919px) {
-    align-items: stretch;
-    flex-direction: column;
+  @media (min-width: 920px) {
+    align-items: center;
+    flex-direction: row;
   }
 }
 
