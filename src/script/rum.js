@@ -91,3 +91,59 @@ const useDataStorage = () => {
 };
 
 const { track } = useDataStorage();
+
+onTTFB(({ value, attribution, navigationType }) => {
+  const metrics = {
+    ttfb: {
+      value,
+      navigationType,
+      cacheDuration: attribution.cacheDuration,
+      dnsDuration: attribution.dnsDuration,
+      connectionDuration: attribution.connectionDuration,
+      requestDuration: attribution.requestDuration,
+      waitingDuration: attribution.connectionDwaitingDurationuration,
+      requestStart: navigation.requestStart,
+      responseEnd: navigation.responseEnd,
+      responseStart: navigation.responseStart,
+      fetchStart: navigation.fetchStart,
+      finalResponseHeadersStart: navigation.finalResponseHeadersStart,
+      domInteractive: navigation.domInteractive,
+      domComplete: navigation.domComplete,
+      connectEnd: navigation.connectEnd,
+      connectStart: navigation.connectStart,
+    },
+  };
+
+  track(metrics);
+});
+
+onFCP(({ value, attribution }) => {
+  const metrics = {
+    fcp: {
+      value,
+      firstByteToFCP: attribution.firstByteToFCP,
+      loadState: attribution.loadState,
+      startTime: attribution.fcpEntry?.startTime,
+      entryType: attribution.fcpEntry?.entryType,
+      duration: attribution.fcpEntry?.duration,
+    },
+  };
+
+  track(metrics);
+});
+
+onLCP(({ value, attribution }) => {
+  const metrics = {
+    lcp: {
+      value,
+      element: attribution.element,
+      url: attribution.url,
+      resourceLoadDelay: attribution.resourceLoadDelay,
+      resourceLoadDuration: attribution.resourceLoadDuration,
+      elementRenderDelay: attribution.elementRenderDelay,
+      resourceLoadDelay: attribution.resourceLoadDelay,
+    },
+  };
+
+  track(metrics);
+});
