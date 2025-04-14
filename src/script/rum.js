@@ -118,7 +118,6 @@ onTTFB(({ value, attribution, navigationType }) => {
       connectStart: round(navigation.connectStart),
     },
   };
-  console.log('TTFB', metrics);
 
   track(metrics);
 });
@@ -134,7 +133,6 @@ onFCP(({ value, attribution }) => {
       duration: round(attribution.fcpEntry?.duration),
     },
   };
-  console.log('FCP', metrics);
 
   track(metrics);
 });
@@ -150,7 +148,6 @@ onLCP(({ value, attribution }) => {
       elementRenderDelay: round(attribution.elementRenderDelay),
     },
   };
-  console.log('LCP', metrics);
 
   track(metrics);
 });
