@@ -3,8 +3,12 @@ import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals/attribution';
 const wasFetchLater = sessionStorage.getItem('fetchLater');
 const isFetchLater = Math.random() < 0.5;
 const navigation = performance.getEntriesByType('navigation')[0];
-console.log(isFetchLater);
 sessionStorage.setItem('fetchLater', isFetchLater);
+
+const round = (number) => {
+  if (typeof number !== 'number' || number !== number) return;
+  return Math.round(number);
+};
 
 const onHidden = (callback) => {
   document.addEventListener('visibilitychange', () => {
@@ -43,12 +47,11 @@ const useRequestHandler = (endpoint) => {
 
   const send = (rawData) => {
     const data = JSON.stringify(rawData);
-    console.log(rawData);
-    /* if (isFetchLater) {
+    if (isFetchLater) {
       updateBeacon(data);
     } else {
       navigator.sendBeacon(endpoint, data);
-    } */
+    }
   };
 
   return { send };
@@ -68,21 +71,24 @@ const useDataStorage = () => {
       ...data,
     };
 
-    const dataToSend = {
-      ...storage,
-      id,
-      timestamp,
-      fetchLater: Boolean(wasFetchLater),
-    };
-
     if (isFetchLater) {
-      requestHandler.send(dataToSend);
+      requestHandler.send({
+        ...storage,
+        id,
+        timestamp,
+        fetchLater: Boolean(wasFetchLater),
+      });
     } else {
       onHidden(() => {
         if (Object.keys(storage).length > 0) {
-          requestHandler.send(dataToSend);
+          requestHandler.send({
+            ...storage,
+            id,
+            timestamp,
+            fetchLater: Boolean(wasFetchLater),
+          });
+          storage = {};
         }
-        storage = {};
       });
     }
   };
@@ -95,24 +101,24 @@ const { track } = useDataStorage();
 onTTFB(({ value, attribution, navigationType }) => {
   const metrics = {
     ttfb: {
-      value,
+      value: round(value),
       navigationType,
-      cacheDuration: attribution.cacheDuration,
-      dnsDuration: attribution.dnsDuration,
-      connectionDuration: attribution.connectionDuration,
-      requestDuration: attribution.requestDuration,
-      waitingDuration: attribution.connectionDwaitingDurationuration,
-      requestStart: navigation.requestStart,
-      responseEnd: navigation.responseEnd,
-      responseStart: navigation.responseStart,
-      fetchStart: navigation.fetchStart,
-      finalResponseHeadersStart: navigation.finalResponseHeadersStart,
-      domInteractive: navigation.domInteractive,
-      domComplete: navigation.domComplete,
-      connectEnd: navigation.connectEnd,
-      connectStart: navigation.connectStart,
+      cacheDuration: round(attribution.cacheDuration),
+      dnsDuration: round(attribution.dnsDuration),
+      connectionDuration: round(attribution.connectionDuration),
+      requestDuration: round(attribution.requestDuration),
+      waitingDuration: round(attribution.waitingDuration),
+      requestStart: round(navigation.requestStart),
+      responseEnd: round(navigation.responseEnd),
+      responseStart: round(navigation.responseStart),
+      fetchStart: round(navigation.fetchStart),
+      domInteractive: round(navigation.domInteractive),
+      domComplete: round(navigation.domComplete),
+      connectEnd: round(navigation.connectEnd),
+      connectStart: round(navigation.connectStart),
     },
   };
+  console.log('TTFB', metrics);
 
   track(metrics);
 });
@@ -120,14 +126,15 @@ onTTFB(({ value, attribution, navigationType }) => {
 onFCP(({ value, attribution }) => {
   const metrics = {
     fcp: {
-      value,
-      firstByteToFCP: attribution.firstByteToFCP,
+      value: round(value),
+      firstByteToFCP: round(attribution.firstByteToFCP),
       loadState: attribution.loadState,
-      startTime: attribution.fcpEntry?.startTime,
+      startTime: round(attribution.fcpEntry?.startTime),
       entryType: attribution.fcpEntry?.entryType,
-      duration: attribution.fcpEntry?.duration,
+      duration: round(attribution.fcpEntry?.duration),
     },
   };
+  console.log('FCP', metrics);
 
   track(metrics);
 });
@@ -135,15 +142,15 @@ onFCP(({ value, attribution }) => {
 onLCP(({ value, attribution }) => {
   const metrics = {
     lcp: {
-      value,
+      value: round(value),
       element: attribution.element,
       url: attribution.url,
-      resourceLoadDelay: attribution.resourceLoadDelay,
-      resourceLoadDuration: attribution.resourceLoadDuration,
-      elementRenderDelay: attribution.elementRenderDelay,
-      resourceLoadDelay: attribution.resourceLoadDelay,
+      resourceLoadDelay: round(attribution.resourceLoadDelay),
+      resourceLoadDuration: round(attribution.resourceLoadDuration),
+      elementRenderDelay: round(attribution.elementRenderDelay),
     },
   };
+  console.log('LCP', metrics);
 
   track(metrics);
 });
