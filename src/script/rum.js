@@ -1,5 +1,7 @@
 import { onFCP, onLCP, onTTFB } from 'web-vitals/attribution';
 
+let isFetchLater;
+
 const onBFCache = (callback) => {
   addEventListener(
     'pageshow',
@@ -68,7 +70,7 @@ const useDataStorage = () => {
     'https://morning-mud-4dc5.max2bronner.workers.dev',
   );
 
-  let id, timestamp, wasFetchLater, isFetchLater, storage;
+  let id, timestamp, wasFetchLater, storage;
 
   const initializeStorage = () => {
     id = crypto.randomUUID();
