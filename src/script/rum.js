@@ -1,9 +1,16 @@
-import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals/attribution';
+import { onFCP, onLCP, onTTFB } from 'web-vitals/attribution';
 
-const wasFetchLater = sessionStorage.getItem('fetchLater');
-const isFetchLater = Math.random() < 0.5;
-const navigation = performance.getEntriesByType('navigation')[0];
-sessionStorage.setItem('fetchLater', isFetchLater);
+const onBFCache = (callback) => {
+  addEventListener(
+    'pageshow',
+    (event) => {
+      if (event.persisted) {
+        callback(event);
+      }
+    },
+    true,
+  );
+};
 
 const round = (number) => {
   if (typeof number !== 'number' || number !== number) return;
@@ -60,9 +67,22 @@ const useDataStorage = () => {
   const requestHandler = useRequestHandler(
     'https://morning-mud-4dc5.max2bronner.workers.dev',
   );
-  const id = crypto.randomUUID();
-  const timestamp = Date.now();
-  let storage = {};
+
+  let id, timestamp, wasFetchLater, isFetchLater, storage;
+
+  const initializeStorage = () => {
+    id = crypto.randomUUID();
+    timestamp = Date.now();
+    wasFetchLater = sessionStorage.getItem('fetchLater');
+    isFetchLater = Math.random() < 0.5;
+    sessionStorage.setItem('fetchLater', isFetchLater);
+    storage = {};
+  };
+
+  initializeStorage();
+  onBFCache(() => {
+    initializeStorage();
+  });
 
   const track = (data) => {
     storage = {
@@ -97,7 +117,10 @@ const useDataStorage = () => {
 
 const { track } = useDataStorage();
 
+onBFCache(() => {});
+
 onTTFB(({ value, attribution, navigationType }) => {
+  const navigation = performance.getEntriesByType('navigation')[0];
   const metrics = {
     navigationType,
     ttfb: {
