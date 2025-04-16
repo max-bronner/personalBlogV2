@@ -100,9 +100,9 @@ const { track } = useDataStorage();
 
 onTTFB(({ value, attribution, navigationType }) => {
   const metrics = {
+    navigationType,
     ttfb: {
       value: round(value),
-      navigationType,
       cacheDuration: round(attribution.cacheDuration),
       dnsDuration: round(attribution.dnsDuration),
       connectionDuration: round(attribution.connectionDuration),
@@ -128,9 +128,9 @@ onFCP(({ value, attribution }) => {
       value: round(value),
       firstByteToFCP: round(attribution.firstByteToFCP),
       loadState: attribution.loadState,
-      startTime: round(attribution.fcpEntry?.startTime),
-      entryType: attribution.fcpEntry?.entryType,
-      duration: round(attribution.fcpEntry?.duration),
+      startTime: round(attribution.fcpEntry?.startTime) ?? null,
+      entryType: attribution.fcpEntry?.entryType ?? null,
+      duration: round(attribution.fcpEntry?.duration) ?? null,
     },
   };
 
@@ -141,8 +141,8 @@ onLCP(({ value, attribution }) => {
   const metrics = {
     lcp: {
       value: round(value),
-      element: attribution.element,
-      url: attribution.url,
+      element: attribution.element ?? null,
+      url: attribution.url ?? null,
       resourceLoadDelay: round(attribution.resourceLoadDelay),
       resourceLoadDuration: round(attribution.resourceLoadDuration),
       elementRenderDelay: round(attribution.elementRenderDelay),
