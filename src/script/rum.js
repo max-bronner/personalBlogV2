@@ -37,8 +37,7 @@ const useRequestHandler = (endpoint) => {
     }
 
     beaconAbort = new AbortController();
-    beaconResult = fetchLater({
-      url: endpoint,
+    beaconResult = fetchLater(endpoint, {
       method: 'POST',
       body: data,
       signal: beaconAbort.signal,
