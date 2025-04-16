@@ -79,6 +79,7 @@ const useDataStorage = () => {
     isFetchLater = Math.random() < 0.5;
     sessionStorage.setItem('fetchLater', isFetchLater);
     storage = {};
+    console.log(isFetchLater);
   };
 
   initializeStorage();
