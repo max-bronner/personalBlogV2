@@ -75,11 +75,11 @@ const useDataStorage = () => {
   const initializeStorage = () => {
     id = crypto.randomUUID();
     timestamp = Date.now();
-    wasFetchLater = sessionStorage.getItem('fetchLater');
+    wasFetchLater = sessionStorage.getItem('fetchLater') === 'true';
     isFetchLater = Math.random() < 0.5;
     sessionStorage.setItem('fetchLater', isFetchLater);
     storage = {};
-    console.log(isFetchLater);
+    console.log(isFetchLater, wasFetchLater);
   };
 
   initializeStorage();
@@ -98,7 +98,7 @@ const useDataStorage = () => {
         ...storage,
         id,
         timestamp,
-        fetchLater: Boolean(wasFetchLater),
+        fetchLater: wasFetchLater,
       });
     } else {
       onHidden(() => {
@@ -107,7 +107,7 @@ const useDataStorage = () => {
             ...storage,
             id,
             timestamp,
-            fetchLater: Boolean(wasFetchLater),
+            fetchLater: wasFetchLater,
           });
           storage = {};
         }
