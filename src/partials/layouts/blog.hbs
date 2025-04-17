@@ -10,34 +10,36 @@
 
     <div class="blog__grid">
       {{#each articles}}
-      <article
-        class="card {{#if this.isDisabled}}card--disabled{{/if}}"
-        data-category="{{ this.category }}"
-        data-date="{{ this.date }}"
-      >
-        {{#if this.isDisabled}}
-        <div class="card__link">
-        {{else}}
-        <a class="card__link" href="{{ this.path }}">
-        {{/if}}
-          <div class="card__image">
-            {{> components/image/image this.image imgClass="card__img" eagerLoaded = @first}}
-          </div>
-          <div class="card__content">
-            <span class="card__category">{{ this.category }}</span>
-            <h2 class="card__title">{{ this.title }}</h2>
-            <p class="card__excerpt">{{ this.description }}</p>
-            <div class="card__footer">
-              <span class="card__subtext">{{#unless this.isDisabled}}Read More{{/unless}}</span>
-              <span class="card__date">{{ this.date }}</span>
+        {{#unless this.isDisabled}}
+          <article
+            class="card {{#if this.isDisabled}}card--disabled{{/if}}"
+            data-category="{{ this.category }}"
+            data-date="{{ this.date }}"
+          >
+            {{#if this.isDisabled}}
+            <div class="card__link">
+            {{else}}
+            <a class="card__link" href="{{ this.path }}">
+            {{/if}}
+              <div class="card__image">
+                {{> components/image/image this.image imgClass="card__img" eagerLoaded = @first}}
+              </div>
+              <div class="card__content">
+                <span class="card__category">{{ this.category }}</span>
+                <h2 class="card__title">{{ this.title }}</h2>
+                <p class="card__excerpt">{{ this.description }}</p>
+                <div class="card__footer">
+                  <span class="card__subtext">{{#unless this.isDisabled}}Read More{{/unless}}</span>
+                  <span class="card__date">{{ this.date }}</span>
+                </div>
+              </div>
+            {{#if this.isDisabled}}
             </div>
-          </div>
-        {{#if this.isDisabled}}
-        </div>
-        {{else}}
-        </a>
-        {{/if}}
-      </article>
+            {{else}}
+            </a>
+            {{/if}}
+          </article>
+        {{/unless}}
       {{/each}}
     </div>
 
